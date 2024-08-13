@@ -6,7 +6,7 @@
     },
     "bh1750_illumination_topic": {
         "NAME": "/bh1750/illumination",
-        "TYPE": "line_following_msg.msg.Illumination"
+        "TYPE": "ltrp_config_ros.msg.Illumination"
     },
     "bh1750_activation_topic": {
         "NAME": "/bh1750/activation",
@@ -34,15 +34,15 @@
     },
     "computing_time_topic": {
         "NAME": "/computing_time",
-        "TYPE": "line_following_msg/ComputingTime"
+        "TYPE": "ltrp_config_ros/ComputingTime"
     },
     "detection_result_topic": {
         "NAME": "/detection",
-        "TYPE": "line_following_msg.msg.Detection"
+        "TYPE": "ltrp_config_ros.msg.Detection"
     },
     "detected_target_topic": {
         "NAME": "/detected_target",
-        "TYPE": "line_following_ros.msg.Target"    
+        "TYPE": "ltrp_config_ros.msg.Target"    
     },
     "drive_control_mode_topic": {
         "NAME": "/drive_control_mode",
@@ -62,7 +62,7 @@
     },
     "error_topic": {
         "NAME": "/error",
-        "TYPE": "line_following_ros.msg.Error"
+        "TYPE": "ltrp_config_ros.msg.Error"
     },
     "forced_stop_topic": {
         "NAME": "/forced_stop",
@@ -102,31 +102,35 @@
     },
     "motor_driver_feedback_topic": {
         "NAME": "/mtr_drv_feedback",
-        "TYPE": "line_following_msg.msg.Feedback"
+        "TYPE": "ltrp_config_ros.msg.Feedback"
+    },
+    "node_kill_topic": {
+        "NAME": "/kill",
+        "TYPE": "std_msgs.msg.UInt8"
     },
     "node_ready_topic": {
         "NAME": "/node_ready",
-        "TYPE": "line_following_msg.msg.NodeReady.msg"
+        "TYPE": "ltrp_config_ros.msg.NodeReady"
+    },
+    "node_respawn_result_topic": {
+        "NAME": "/respawn_result",
+        "TYPE": "ltrp_config_ros.msg.NodeRespawnResult"
     },
     "obstacle_detection_topic": {
         "NAME": "/obstacle",
-        "TYPE": "cws.msg.Obstacle"
+        "TYPE": "ltrp_config_ros.msg.Obstacle"
     },
     "odometry_topic": {
         "NAME": "/odom",
         "TYPE": "nav_msgs.msg.Odometry"
     },
-    "node_kill_topic": {
-        "NAME": "/kill",
-        "TYPE": "ltrp_config_ros.msg.NodeKill.msg"
-    },
     "overseer_topic": {
         "NAME": "/overseer",
-        "TYPE": "line_following_msg.msg.Overseer.msg"
+        "TYPE": "ltrp_config_ros.msg.Overseer"
     },
     "range_detection_topic": {
         "NAME": "/range_detection",
-        "TYPE": "line_following_ros.msg.RangeDetection"
+        "TYPE": "ltrp_config_ros.msg.RangeDetection"
     },
     "range_sensor_activation_topic": {
         "NAME": "/range/activation",
@@ -134,11 +138,11 @@
     },
     "range_sensor_left_topic": {
         "NAME": "/range/left",
-        "TYPE": "line_following_msg.msg.RangeData"
+        "TYPE": "ltrp_config_ros.msg.RangeData"
     },
     "range_sensor_right_topic": {
         "NAME": "/range/right",
-        "TYPE": "line_following_msg.msg.RangeData"
+        "TYPE": "ltrp_config_ros.msg.RangeData"
     },
     "record_central_camera_topic": {
         "NAME": "/record/central",
@@ -178,7 +182,7 @@
     },
     "system_status_topic": {
         "NAME": "/system_status",
-        "TYPE": "line_followinf_ros.msg.SystemStatus"
+        "TYPE": "ltrp_config_ros.msg.SystemStatus"
     },
     "ultrasonic_topic": {
         "NAME": "/ultrasonic",

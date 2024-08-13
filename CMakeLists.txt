@@ -23,10 +23,12 @@ add_message_files(
   Obstacle.msg
   Overseer.msg
   NodeReady.msg
+  NodeRespawnResult.msg
   RangeData.msg
   Rotation.msg
   RTK.msg
   SubROIDetection.msg
+  SystemActivate.msg
   SystemResetResult.msg
   SystemStatus.msg
   Target.msg

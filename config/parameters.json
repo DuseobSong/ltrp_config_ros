@@ -7,14 +7,15 @@
         "LIST": [0, 1, 2, 3, 4, 5, 6],
         "VALUE": {
             "OVERSEER": 0,
-            "MAINBOARD SERIAL": 1,
-            "DRIVE CONTROL": 2,
-            "LINE DETECT": 3,
+            "MAINBOARD_SERIAL": 1,
+            "DRIVE_CONTROL": 2,
+            "LINE_DETECT": 3,
             "CWS": 4,
-            "RANGE SENSOR": 5,
-            "BH1750": 6,
-            "ULTRASONIC": 7,
-            "EXTERNAL BUTTON": 8
+            "CWS_LOWER": 5,
+            "RANGE_SENSOR": 6,
+            "BH1750": 7,
+            "ULTRASONIC": 8,
+            "EXTERNAL_BUTTON": 9
         }
     },
     "CART_MODE_COMMAND": {
@@ -113,11 +114,12 @@
             "DESCRIPTION": "",
             "LIST": [],
             "VALUE": {
-                "NODE_STATE_LOADING": 255,
-                "NODE_STATE_OK": 0 
+                "NODE_STATE_UNKNOWN": 255,
+                "NODE_STATE_OK": 200,
+                "NODE_STATE_RESET":210 
             }
         },
-        "DRIVE CONTROL": {
+        "DRIVE_CONTROL": {
             "DESCRIPTION": "",
             "LIST": [],
             "VALUE": {
@@ -134,7 +136,7 @@
                 "STATIC_OBSTACLE_WAIT_TIME": 10.0
             }
         },
-        "LINE DETECT": {
+        "LINE_DETECT": {
             "DESCRIPTION": "",
             "LIST": [],
             "VALUE": {
@@ -168,7 +170,7 @@
                 "MODEL": "DH-IPC-HDBW1431E"
             }
         },
-        "MAINBOARD SERAIL": {
+        "MAINBOARD_SERAIL": {
             "DESCRIPTION": "",
             "LIST": [],
             "VALUE": {
@@ -195,7 +197,14 @@
                 "RESUME_WAIT_TIME": 3.0
             }
         },
-        "EXTERNAL BUTTON": {
+        "CWS_LOWER": {
+            "DESCRIPTION": "",
+            "LIST": [],
+            "VALUE": {
+                
+            }
+        },
+        "EXTERNAL_BUTTON": {
             "DESCRIPTION": "",
             "LIST": [],
             "VALUE": {
@@ -214,7 +223,7 @@
                 "SYSTEM_LOADING_BLINK_INTERVAL": 0.1
             }
         },
-        "RANGE SENSOR": {
+        "RANGE_SENSOR": {
             "DESCRIPTION": "",
             "LIST": [],
             "VALUE": {
