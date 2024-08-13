@@ -1,0 +1,326 @@
+{
+    "ERROR_CODES": {
+
+    },
+    "NODE_CODE": {
+        "DESCRIPTION": "",
+        "LIST": [0, 1, 2, 3, 4, 5, 6],
+        "VALUE": {
+            "OVERSEER": 0,
+            "MAINBOARD SERIAL": 1,
+            "DRIVE CONTROL": 2,
+            "LINE DETECT": 3,
+            "CWS": 4,
+            "RANGE SENSOR": 5,
+            "BH1750": 6,
+            "ULTRASONIC": 7,
+            "EXTERNAL BUTTON": 8
+        }
+    },
+    "CART_MODE_COMMAND": {
+        "DESCRIPTION": "",
+        "LIST": [0, 10, 11, 12, 13, 14],
+        "VALUE": {
+            "CMD_NO_CHANGE": 0,
+            "CMD_TO_MANUAL": 10,
+            "CMD_TO_FOLLOW": 11,
+            "CMD_TO_POS_MODE": 12,
+            "CMD_TO_REMOTE": 13,
+            "CMD_TO_VEL_MODE": 14
+        }
+    },
+    "MODE_FEEDBACK_BYTES": {
+        "DESCRIPTION": "",
+        "LIST": [0, 1, 2, 3, 4],
+        "VALUE": {
+            "FEED_MANUAL": 0,
+            "FEED_FOLLOW": 1,
+            "FEED_POS_MODE": 2,
+            "FEED_REMOTE": 3,
+            "FEED_VEL_MODE": 4
+        }
+    },
+    "CART_CONTROL_MODE": {
+        "DESCRIPTION": "",
+        "LIST": [0, 1, 2, 3, 4, 9],
+        "VALUE": {
+            "CON_MODE_MANUAL": 0,
+            "CON_MODE_VEL": 1,
+            "CON_MODE_FOLLOW": 2,
+            "CON_MODE_POS": 3, 
+            "CON_MODE_REMOTE": 4,
+            "CON_MODE_ERROR": 9
+        }
+    },
+    "CAMERA_DIRECTION": {
+        "DESCRIPTION": "",
+        "LIST": [3, 5],
+        "VALUE": {
+            "CAM_DIR_LEFT": 3,
+            "CAM_DIR_RIGHT": 5
+        }
+    },
+    "ROTATION_STATE": {
+        "DESCRIPTION": "",
+        "LIST": [1, 2, 3, 4],
+        "VALUE": {
+            "ROTATION_WAIT": 1,
+            "ROTATION_START": 2,
+            "ROTATION_ON_GOING": 3, 
+            "ROTATION_END": 4
+        }
+    },
+    "ROTATION_DIRECTION": {
+        "DESCRIPTION": "",
+        "LIST": [1, 2],
+        "VALUE": {
+            "ROTATION_DIR_CW": 1,
+            "ROTATION_DIR_CCW": 2
+        }
+    },
+    "REMOTE_CONTROL_COMMAND": {
+        "DESCRIPTION": "",
+        "LIST": [1, 2, 3, 4, 9, 11, 12, 13, 14, 99],
+        "VALUE": {
+            "REMOTE_ACCELERATE": 1,
+            "REMOTE_DECELERATE": 2,
+            "REMOTE_TURN_LEFT": 3,
+            "REMOTE_TURN_RIGHT": 4,
+            "REMOTE_STOP": 9,
+            "REMOTE_MODE_CHANGE_MANUAL": 11,
+            "REMOTE_MODE_CHANGE_VEL_CON": 12,
+            "REMOTE_MODE_CHANGE_VEL_POS": 13,
+            "REMOTE_MODE_CHANGE_FOLLOW": 14,
+            "REMOTE_ACTIVATION": 99
+        }
+    },
+    "DEFAULT_VALUES": {
+        "COMMON": {
+            "DESCRIPTION": "",
+            "LIST": [],
+            "VALUE": {
+                "SYSTEM_SHUTDOWN_CODE": 92,
+                "SYSTEM_RESET_CODE": 98,
+                "SYSTEM_RESET_SUCCESS": 88,
+                "SYSTEM_RESET_FAILED": 89,
+                "DEFAULT_ERR_CODE": 0,
+                "DEFAULT_CON_MODE": 0,
+                "DEFAULT_ROTATION_FLAG": 1,
+                "ACTIVE_SIDE_CAM_DIR": 3
+            }
+        },
+        "DRIVE CONTROL": {
+            "DESCRIPTION": "",
+            "LIST": [],
+            "VALUE": {
+                "V_LIN_LIM": 0.5,
+                "V_ANG_LIM": 40,
+                "V_STEP": 0.1,
+                "OMEGA_STEP": 1.0,
+                "ROTATION_DIR": 1,
+                "ROTATION_MARGIN": 10.0,
+                "ROTATION_ANGULAR_VELOCITY": 20.0,
+                "LINEAR_VELOCITY_CALC_COEFF": 1.2,
+                "ANGULAR_VELOCITY_CALC_COEFF": 1.5,
+                "DRIVE_SCENARIO_CATEGORY": 1,
+                "STATIC_OBSTACLE_WAIT_TIME": 10.0
+            }
+        },
+        "LINE DETECT": {
+            "DESCRIPTION": "",
+            "LIST": [],
+            "VALUE": {
+                "SRC_HEIGHT": 1280,
+                "SRC_WIDTH": 720,
+                "RESIZE_HEIGHT": 540,
+                "RESIZE_WIDTH": 920,
+                "UPPER_ROI_ROW": 100,
+                "LOWER_ROI_ROW": 420,
+                "UPPER_ROI_WIDTH": 300,
+                "LOWER_ROI_WIDTH": 850,
+                "CONTOUR_AREA_THRESHOLD": 150,
+                "LATERAL_OFFSET": 0.0,
+                "USER": "irova",
+                "PSWD": "1q2w3e4r",
+                "ADDR": "192.168.2.110",
+                "PORT": 554,
+                "FRAME_SKIP": 3,
+                "Y_LOWER_THRESHOLD": 0,
+                "Y_UPPER_THRESHOLD": 255,
+                "CR_LOWER_THRESHOLD": 0,
+                "CR_UPPER_THRESHOLD": 255,
+                "CB_LOWER_THRESHOLD": 0,
+                "CB_UPPER_THRESHOLD": 100,
+                "H_LOWER_THRESHOLD": 20,
+                "H_UPPER_THRESHOLD": 60,
+                "S_LOWER_THRESHOLD": 0,
+                "S_UPPER_THRESHOLD": 255,
+                "V_LOWER_THRESHOLD": 150,
+                "V_UPPER_THRESHOLD": 255,
+                "MODEL": "DH-IPC-HDBW1431E"
+            }
+        },
+        "MAINBOARD SERAIL": {
+            "DESCRIPTION": "",
+            "LIST": [],
+            "VALUE": {
+                "BAUDRATE": 115200,
+                "MONITORING_PACKET_SIZE": 23,
+                "LIDAR_BUFFER_SIZE": 180,
+                "RX_PACKET_SIZE": 230,
+                "TX_PACKET_SIZE": 25,
+                "LIDAR_OUT_OF_BOUND_DISTANCE": 10.0,
+                "LIDAR_SAFETY_DISTANCE": 0.7
+            }
+        },
+        "CWS": {
+            "DESCRIPTION": "",
+            "LIST": [],
+            "VALUE": {
+                "LIDAR_OUT_OF_BOUND_DISTANCE": 10.0,
+                "SAFETY_STOP_DISTANCE": 0.7,
+                "STOP_DISTANCE": 0.5,
+                "LIDAR_BUFFER_SIZE": 180,
+                "DETECTION_ANGLE_LOWER_LIMIT": 30,
+                "DETECTION_ANGLE_UPPER_LIMIT": 50,
+                "STATIC_OBSTACLE_WAIT_TIME": 5.0,
+                "RESUME_WAIT_TIME": 3.0
+            }
+        },
+        "EXTERNAL BUTTON": {
+            "DESCRIPTION": "",
+            "LIST": [],
+            "VALUE": {
+                "BTN_SIGNAL_IN": 1,
+                "BTN_LIGHT_OUT": 15,
+                "BTN_TOGGLE_TIMEOUT": 3.0,
+                "BTN_SYSTEM_RESET_TIMEOUT": 10.0,
+                "BTN_TOGGLE_LINE_TRACER_TIMEOUT": 3.0,
+                "BTN_TOGGLE_FOLLOW_TIMEOUT": 0.5,
+                "IDLE_BLINK_INTERVAL": 2.0,
+                "FOLLOW_BLINK_INTERVAL_1": 0.25,
+                "FOLLOW_BLINK_INTERVAL_2": 0.75,
+                "REMOTE_BLINK_INTERVAL_1": 0.1,
+                "REMOTE_BLINK_INTERVAL_2": 1.0,
+                "ERROR_BLINK_INTERVAL": 0.25,
+                "SYSTEM_LOADING_BLINK_INTERVAL": 0.1
+            }
+        },
+        "RANGE SENSOR": {
+            "DESCRIPTION": "",
+            "LIST": [],
+            "VALUE": {
+                "BAUDRATE": 115200,
+                "LEFT_SENSOR_FRAME_ID": "tfmini_left",
+                "RIGHT_SENSOR_FRAME_ID": "tfmini_right"
+            }
+        },
+        "BH1750": {
+            "DESCRIPTION": "",
+            "LIST": [],
+            "VALUE": {
+                "I2C_CHANNEL": 0,
+                "I2C_ADDRESS": 35
+            }
+        },
+        "ULTRASONIC": {
+            "DESCRIPTION": "",
+            "LIST": [],
+            "VALUE": {
+                "BAUDRATE": 115200,
+                "PACKET_SIZE": 10
+            }
+        }
+    },
+    "PORT_LIST": {
+        "DESCRIPTION": "",
+        "LIST": [],
+        "VALUE": {
+            "MAINBOARD": "/dev/main_board",
+            "TFMINI_PLUS_LEFT": "/dev/tfmini_left",
+            "TFMINI_PLUS_RIGHT": "/dev/tfmini_right",
+            "RPLIDAR_UPPER": "/dev/rplidar_s3",
+            "RPLIDAR_LOWER": "/dev/rplidar_c1",
+            "ULTRASONIC": "/dev/ultrasonic"
+        }
+    },
+    "MAINBOARD_SERIAL_BYTES": {
+        "DESCRIPTION": "",
+        "LIST": [0, 1, 2, 3, 4, 13, 35, 38, 43, 45, 48, 46, 64, 221],
+        "VALUE": {
+            "COM_CHECK_BYTE": 221,
+            "CMD_START_BYTE": 38, 
+            "DOT_BYTE": 46,
+            "END_BYTE": 13,
+            "MODE_CHANGE_FOLLOW_BYTE": 11,
+            "MODE_CHANGE_MANUAL_BYTE": 10,
+            "MODE_CHANGE_NO_CHANGE_BYTE": 0,
+            "MODE_CHANGE_POS_BYTE": 12,
+            "MODE_CHANTE_REMOTE_BYTE": 13,
+            "MODE_CHANGE_VEL_BYTE": 14,
+            "MODE_FOLLOW_BYTE": 2,
+            "MODE_MANUAL_BYTE": 0,
+            "MODE_POS_BYTE": 3,
+            "MODE_REMOTE_BYTE": 4,
+            "MODE_VEL_BYTE": 1,
+            "POSITION_START_BYTE": 64,
+            "POSITIVE_BYTE": 43,
+            "NEGATIVE_BYTE": 45,
+            "RX_START_BYTE": 35,
+            "VELOCITY_START_BYTE": 35,
+            "ZERO_BYTE": 48
+        }
+    },
+    "MAINBOARD_SERAIL_RX_INDEX": {
+        "DESCRIPTION": "",
+        "LIST": [0, 1, 24, 28, 32, 36, 40, 44, 48, 49, 229],
+        "VALUE": {
+            "START_BYTE": 0,
+            "MONITORING": 1,
+            "DISTANCE": 24,
+            "V_LINEAR": 28,
+            "GYRO_Z": 32,
+            "HEADING": 36,
+            "X_COORD": 40,
+            "Y_COORD": 44,
+            "MODE": 48,
+            "LIDAR": 49,
+            "END_BYTE": 229
+        }
+    },
+    "MAINBOARD_SERIAL_TX_INDEX": {
+        "DESCRIPTION": "",
+        "LIST": [0, 1, 8, 15, 22, 24],
+        "VALUE": {
+            "START_BYTE": 0,
+            "CMD_VEL_LIN": 1,
+            "CMD_VEL_ANG": 8,
+            "DUMMY": 15,
+            "MODE": 22,
+            "END_BYTE": 24
+        }
+    },
+    "BH1750_MODE_BYTES": {
+        "DESCRIPTION": "",
+        "LIST": [],
+        "VALUE": {
+            "CONT_H_RES_MODE": 16,
+            "CONT_H_RES_MODE2": 17,
+            "CONT_L_RES_MODE": 19,
+            "ONETIME_H_RES_MODE": 32,
+            "ONETIME_H_RES_MODE2": 33,
+            "ONETIME_L_RES_MODE": 35
+        }
+    },
+    "ULTRASONIC_BYTES": {
+        "DESCRIPTION": "",
+        "LIST": [],
+        "VALUE": {
+            "START_BYTE": 36,
+            "SAFE_BYTE": 83,
+            "WARNING_BYTE": 87,
+            "END_BYTE_1": 13,
+            "END_BYTE_2": 10
+        }
+    }
+}

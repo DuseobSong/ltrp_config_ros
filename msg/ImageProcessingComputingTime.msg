@@ -1,0 +1,4 @@
+float64 CaptureCount
+float64 CaptureTime
+float64 ResizeTime
+float64 UndistortionTime

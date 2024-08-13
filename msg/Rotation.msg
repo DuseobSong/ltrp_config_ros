@@ -1,0 +1,2 @@
+uint8 RotationState
+uint8 RotationDirection

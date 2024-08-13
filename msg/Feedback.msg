@@ -1,0 +1,9 @@
+uint8[] SystemMonitoring
+float64 VLinear
+float64 Distance
+float64 Heading
+float64 GyroZ
+float64 PosX
+float64 PosY
+float64[] Lidar
+uint8 Mode

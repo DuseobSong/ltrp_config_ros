@@ -1,0 +1,182 @@
+{
+    "activate_range_sensor": {
+        "NAME": "/line_tracking/activate_range_sensor",
+        "TYPE": "std_msgs.msg.Bool"
+    },
+    "bh1750_illumination_topic": {
+        "NAME": "/line_tracking/bh1750/illumination",
+        "TYPE": "line_following_msg.msg.Illumination"
+    },
+    "bh1750_activation_topic": {
+        "NAME": "/line_tracking/bh1750/activation",
+        "TYPE": "std_msgs.msg.Bool"
+    },
+    "button_trigger_topic": {
+        "NAME": "/line_tracking/button_trigger",
+        "TYPE": "std_msgs.msg.Bool"
+    },
+    "camera_direction_topic": {
+        "NAME": "/line_tracking/camera_direction",
+        "TYPE": "std_msgs.msg.UInt8"
+    },
+    "central_camera_topic": {
+        "NAME": "/line_tracking/central_camera",
+        "TYPE": "sensor_msgs.msg.Image"
+    },
+    "cmd_vel_topic": {
+        "NAME": "/line_tracking/cmd_vel",
+        "TYPE": "geometry_msgs.msg.Twist"
+    },
+    "command_mode_topic": {
+        "NAME": "/line_tracking/command_mode",
+        "TYPE": "std_msgs.msg.UInt8"
+    },
+    "computing_time_topic": {
+        "NAME": "/line_tracking/computing_time",
+        "TYPE": "line_following_msg/ComputingTime"
+    },
+    "detection_result_topic": {
+        "NAME": "/line_tracking/detection",
+        "TYPE": "line_following_msg.msg.Detection"
+    },
+    "detected_target_topic": {
+        "NAME": "/line_tracking/detected_target",
+        "TYPE": "line_following_ros.msg.Target"    
+    },
+    "drive_control_mode_topic": {
+        "NAME": "/line_tracking/drive_control_mode",
+        "TYPE": "std_msgs.msg.UInt8"
+    },
+    "drive_command_topic": {
+        "NAME": "/line_tracking/drive_command",
+        "TYPE": "std_msgs.msg.UInt8"
+    },
+    "drive_resume_topic": {
+        "NAME": "/line_tracking/drive_resume",
+        "TYPE": "std_msgs.msg.Empty"
+    },    
+    "drive_status_topic": {
+        "NAME": "/line_tracking/drive_status",
+        "TYPE": "std_msgs.msg.UInt8"
+    },
+    "error_topic": {
+        "NAME": "/error",
+        "TYPE": "line_following_ros.msg.Error"
+    },
+    "forced_stop_topic": {
+        "NAME": "/line_tracking/forced_stop",
+        "TYPE": "std_msgs.msg.Empty"
+    },
+    "guide_line_missing_topic": {
+        "NAME": "/line_tracking/guide_line_missing",
+        "TYPE": "std_msgs.msg.Bool"
+    },
+    "left_camera_topic": {
+        "NAME": "/lp_capture/left_camera",
+        "TYPE": "sensor_msgs.msg.Image"
+    },
+    "lidar_main_topic": {
+        "NAME": "/line_tracking/lidar_main",
+        "TYPE": "std_msgs.msg.Float64MultiArray"
+    },    
+    "lidar_pointcloud_topic": {
+        "NAME": "/line_tracking/lidar_pointcloud",
+        "TYPE": "sensor_msgs.msg.PointCloud"
+    },
+    "lidar_sub_topic": {
+        "NAME": "/line_tracking/lidar_sub",
+        "TYPE": "sensor_msgs.msg.LaserScan"
+    },
+    "lp_capture_image_topic": {
+        "NAME": "/lp_capture/image",
+        "TYPE": "sensor_msgs.msg.Image"
+    },
+    "lp_capture_start_topic": {
+        "NAME": "/line_tracking/lp_capture_start",
+        "TYPE": "std_msgs.msg.Bool"
+    },
+    "lp_capture_status_topic": {
+        "NAME": "/line_tracking/lp_capture",
+        "TYPE": "std_msgs.msg.Bool"
+    },
+    "motor_driver_feedback_topic": {
+        "NAME": "/line_tracking/mtr_drv_feedback",
+        "TYPE": "line_following_msg.msg.Feedback"
+    },
+    "node_ready_topic": {
+        "NAME": "/line_tracking/node_ready",
+        "TYPE": "line_following_msg.msg.NodeReady.msg"
+    },
+    "obstacle_detection_topic": {
+        "NAME": "/line_tracking/obstacle",
+        "TYPE": "cws.msg.Obstacle"
+    },
+    "odometry_topic": {
+        "NAME": "/line_tracking/odom",
+        "TYPE": "nav_msgs.msg.Odometry"
+    },
+    "overseer_topic": {
+        "NAME": "/line_tracking/overseer",
+        "TYPE": "line_following_msg.msg.Overseer.msg"
+    },
+    "range_detection_topic": {
+        "NAME": "/line_tracking/range_detection",
+        "TYPE": "line_following_ros.msg.RangeDetection"
+    },
+    "range_sensor_activation_topic": {
+        "NAME": "/line_following/range/activation",
+        "TYPE": "std_msgs.msg.Bool"
+    },
+    "range_sensor_left_topic": {
+        "NAME": "/line_tracking/range/left",
+        "TYPE": "line_following_msg.msg.RangeData"
+    },
+    "range_sensor_right_topic": {
+        "NAME": "/line_tracking/range/right",
+        "TYPE": "line_following_msg.msg.RangeData"
+    },
+    "record_central_camera_topic": {
+        "NAME": "/record/central",
+        "TYPE": "sensor_msgs.msg.Image"
+    },
+    "remote_control_topic": {
+        "NAME": "/line_tracking/remote_cmd",
+        "TYPE": "std_msgs.msg.UInt8"
+    },
+    "right_camera_topic": {
+        "NAME": "/lp_capture/right_camera",
+        "TYPE": "sensor_msgs.msg.Image"
+    },
+    "rotation_start_topic": {
+        "NAME": "/line_tracking/start_rotation",
+        "TYPE": "std_msgs.msg.Empty"
+    },
+    "rotation_state_topic": {
+        "NAME": "/line_tracking/rotation_state",
+        "TYPE": "std_msgs.msg.UInt8"
+    },    
+    "switch_camera_topic": {
+        "NAME": "/line_tracking/switch_camera",
+        "TYPE": "std_msgs.msg.UInt8"
+    },
+    "system_reset_topic": {
+        "NAME": "/system/reset",
+        "TYPE": "std_msgs.msg.UInt8"
+    },
+    "system_reset_result_topic": {
+        "NAME": "/system/reset_result",
+        "TYPE": "std_msgs.msg.UInt8"
+    },
+    "system_shutdown_topic": {
+        "NAME": "/line_tracking/system_shutdown",
+        "TYPE": "std_msgs.msg.UInt8"
+    },
+    "system_status_topic": {
+        "NAME": "/line_tracking/system_status",
+        "TYPE": "line_followinf_ros.msg.SystemStatus"
+    },
+    "ultrasonic_topic": {
+        "NAME": "/line_tracking/ultrasonic",
+        "TYPE": "std_msgs.msg.UInt8MultiArray"
+    }
+}

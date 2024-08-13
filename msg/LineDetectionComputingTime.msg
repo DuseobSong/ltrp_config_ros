@@ -1,0 +1,4 @@
+float64 DetectionCnt
+float64 ThresholdingTime
+float64 DetectionTime
+float64 ComputingTime
