@@ -109,6 +109,14 @@
                 "ACTIVE_SIDE_CAM_DIR": 3
             }
         },
+        "OVERSEER": {
+            "DESCRIPTION": "",
+            "LIST": [],
+            "VALUE": {
+                "NODE_STATE_LOADING": 255,
+                "NODE_STATE_OK": 0 
+            }
+        },
         "DRIVE CONTROL": {
             "DESCRIPTION": "",
             "LIST": [],
