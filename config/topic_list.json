@@ -168,6 +168,10 @@
         "NAME": "/switch_camera",
         "TYPE": "std_msgs.msg.UInt8"
     },
+    "system_activate_topic": {
+        "NAME": "/system/activate",
+        "TYPE": "ltrp_config_ros.msg.SystemActivate"
+    },
     "system_reset_topic": {
         "NAME": "/system/reset",
         "TYPE": "std_msgs.msg.UInt8"
