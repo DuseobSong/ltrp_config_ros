@@ -191,5 +191,9 @@
     "ultrasonic_topic": {
         "NAME": "/ultrasonic",
         "TYPE": "std_msgs.msg.UInt8MultiArray"
+    },
+    "vital_topic": {
+        "NAME": "/vital",
+        "TYPE": "ltrp_config_ros.msg.Vital"
     }
 }

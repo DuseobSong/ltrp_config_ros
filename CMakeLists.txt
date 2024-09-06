@@ -32,6 +32,7 @@ add_message_files(
   SystemResetResult.msg
   SystemStatus.msg
   Target.msg
+  Vital.msg
 )
 
 ## Generate added messages and services with any dependencies listed here
