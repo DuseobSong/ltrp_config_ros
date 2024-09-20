@@ -1,2 +1,2 @@
-Header Header
+Header header
 uint32 Illumination

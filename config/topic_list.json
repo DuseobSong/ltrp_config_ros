@@ -188,6 +188,10 @@
         "NAME": "/system_status",
         "TYPE": "ltrp_config_ros.msg.SystemStatus"
     },
+    "termination_topic": {
+        "NAME": "/terminate",
+        "TYPE": "std_msgs.msg.empty"
+    },
     "ultrasonic_topic": {
         "NAME": "/ultrasonic",
         "TYPE": "std_msgs.msg.UInt8MultiArray"

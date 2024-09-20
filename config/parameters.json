@@ -4,7 +4,9 @@
     },
     "NODE_CODE": {
         "DESCRIPTION": "",
-        "LIST": [0, 1, 2, 3, 4, 5, 6],
+        "LIST": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        "NAME": ["OVERSEER", "MAINBOARD", "DRIVE_CONTROL", "LINE_DETECT", "CWS", "CWS_LOWER", "RANGE_SENSOR", "BH1750", "ULTRASONIC", "EXTERNAL_BUTTON", "RPLIDAR_C1"],
+        "ACTIVATION": [1, 2, 3, 4, 5, 6, 9, 10],
         "VALUE": {
             "OVERSEER": 0,
             "MAINBOARD_SERIAL": 1,
@@ -15,7 +17,47 @@
             "RANGE_SENSOR": 6,
             "BH1750": 7,
             "ULTRASONIC": 8,
-            "EXTERNAL_BUTTON": 9
+            "EXTERNAL_BUTTON": 9,
+            "RPLIDAR_C1": 10
+        },
+        "ROOT_PKG": {
+            "OVERSEER": "ltrp_ros",
+            "MAINBOARD_SERIAL": "ltrp_ros",
+            "DRIVE_CONTROL": "ltrp_ros",
+            "LINE_DETECT": "ltrp_ros",
+            "CWS": "cws_ros",
+            "CWS_LOWER": "cws_ros",
+            "RANGE_SENSOR": "range_sensor_ros",
+            "BH1750": "bh1750_ros",
+            "ULTRA_SONIC": "cws_ros",
+            "EXTERNAL_BUTTON": "ltrp_ros",
+            "RPLIDAR_C1": "rplidar_ros"
+        },
+        "EXECUTABLE": {
+            "OVERSEER": "overseer.py",
+            "MAINBOARD_SERIAL": "serial_node_prototype.py",
+            "DRIVE_CONTROL": "drive_control_prototype.py",
+            "LINE_DETECT": "capture_prototype.py",
+            "CWS": "cws_lidar_main_prototype.py",
+            "CWS_LOWER": "cws_lidar_sub_prototype.py",
+            "RANGE_SENSOR": "range_sensor_prototype.py",
+            "BH1750": "bh1750_prototype.py",
+            "ULTRA_SONIC": "cws_ultrasonic_prototype.py",
+            "EXTERNAL_BUTTON": "external_button_prototype.py",
+            "RPLIDAR_C1": "rplidarNode"
+        },
+        "ARGS": {
+            "OVERSEER": "",
+            "MAINBOARD_SERIAL": "_root_pkg:=ltrp_config_ros _debug:=",
+            "DRIVE_CONTROL": "_root_pkg:=ltrp_config_ros _debug:=",
+            "LINE_DETECT": "_root_pkg:=ltrp_config_ros _debug:=",
+            "CWS": "_root_pkg:=ltrp_config_ros _debug:=false",
+            "CWS_LOWER": "_root_pkg:=ltrp_config_ros _debug:=",
+            "RANGE_SENSOR": "_root_pkg:=ltrp_config_ros _debug:=",
+            "BH1750": "_root_pkg:=ltrp_config_ros _debug:=",
+            "ULTRA_SONIC": "_root_pkg:=ltrp_config_ros _debug:=",
+            "EXTERNAL_BUTTON": "_root_pkg:=ltrp_config_ros _debug:=",
+            "RPLIDAR_C1": "_serial_port:=/dev/rplidar_c1 _serial_baudrate:=460800 _frame_id:=rplidar_c1 _inverted:=false _angle_compensate:=true _scan_frequency:=10.0 _scan_mode:=Standard"
         }
     },
     "CART_MODE_COMMAND": {
@@ -107,15 +149,18 @@
                 "DEFAULT_ERR_CODE": 0,
                 "DEFAULT_CON_MODE": 0,
                 "DEFAULT_ROTATION_FLAG": 1,
-                "ACTIVE_SIDE_CAM_DIR": 3
+                "ACTIVE_SIDE_CAM_DIR": 3,
+                "NODE_STATE_ONLINE": 1,
+                "NODE_STATE_OFFLINE": 2,
+                "NODE_STATE_ERROR": 9
             }
         },
         "OVERSEER": {
             "DESCRIPTION": "",
             "LIST": [],
             "VALUE": {
-                "CMD_KILL_LIST": [10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
-                "CMD_RESPAWN_LIST": [21, 22, 23, 24, 25, 26, 27, 28, 29],
+                "CMD_KILL_LIST": [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29],
+                "CMD_RESPAWN_LIST": [31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49],
                 "CMD_KILL_NODE_0": 10,
                 "CMD_KILL_NODE_1": 11,
                 "CMD_KILL_NODE_2": 12,
@@ -126,23 +171,40 @@
                 "CMD_KILL_NODE_7": 17,
                 "CMD_KILL_NODE_8": 18,
                 "CMD_KILL_NODE_9": 19,
-                "CMD_RESPAWN_NODE_0": 20,
-                "CMD_RESPAWN_NODE_1": 21,
-                "CMD_RESPAWN_NODE_2": 22,
-                "CMD_RESPAWN_NODE_3": 23,
-                "CMD_RESPAWN_NODE_4": 24,
-                "CMD_RESPAWN_NODE_5": 25,
-                "CMD_RESPAWN_NODE_6": 26,
-                "CMD_RESPAWN_NODE_7": 27,
-                "CMD_RESPAWN_NODE_8": 28,
-                "CMD_RESPAWN_NODE_9": 29,
+                "CMD_KILL_NODE_10": 20,
+                "CMD_KILL_NODE_11": 20,
+                "CMD_KILL_NODE_12": 20,
+                "CMD_KILL_NODE_13": 20,
+                "CMD_KILL_NODE_14": 20,
+                "CMD_KILL_NODE_15": 20,
+                "CMD_KILL_NODE_16": 20,
+                "CMD_KILL_NODE_17": 20,
+                "CMD_KILL_NODE_18": 20,
+                "CMD_KILL_NODE_19": 20,
+                "CMD_RESPAWN_NODE_0": 30,
+                "CMD_RESPAWN_NODE_1": 31,
+                "CMD_RESPAWN_NODE_2": 32,
+                "CMD_RESPAWN_NODE_3": 33,
+                "CMD_RESPAWN_NODE_4": 34,
+                "CMD_RESPAWN_NODE_5": 35,
+                "CMD_RESPAWN_NODE_6": 36,
+                "CMD_RESPAWN_NODE_7": 37,
+                "CMD_RESPAWN_NODE_8": 38,
+                "CMD_RESPAWN_NODE_9": 39,
+                "CMD_RESPAWN_NODE_10": 40,
+                "CMD_RESPAWN_NODE_11": 41,
+                "CMD_RESPAWN_NODE_12": 42,
+                "CMD_RESPAWN_NODE_13": 43,
+                "CMD_RESPAWN_NODE_14": 44,
+                "CMD_RESPAWN_NODE_15": 45,
+                "CMD_RESPAWN_NODE_16": 46,
+                "CMD_RESPAWN_NODE_17": 47,
+                "CMD_RESPAWN_NODE_18": 48,
+                "CMD_RESPAWN_NODE_19": 49,
                 "CMD_RESTART": 91,
                 "CMD_REMOVE_ERROR": 95,
                 "CMD_TERMINATE": 97,
                 "CMD_KILL_ALL": 99,
-                "NODE_STATE_ONLINE": 1,
-                "NODE_STATE_OFFLINE": 2,
-                "NODE_STATE_ERROR": 9,
                 "VITAL_CHK_TIMEOUT": 3.0,
                 "RESPAWN_CHK_TIMEOUT": 5.0,
                 "KILL_CHK_TIMEOUT": 1.0,
@@ -197,7 +259,11 @@
                 "S_UPPER_THRESHOLD": 255,
                 "V_LOWER_THRESHOLD": 150,
                 "V_UPPER_THRESHOLD": 255,
-                "MODEL": "DH-IPC-HDBW1431E"
+                "MODEL": "DH-IPC-HDBW1431E",
+                "INIT_TIMEOUT": 120.0,
+                "CAP_THREAD_TIMEOUT": 0.2,
+                "DET_THREAD_TIMEOUT": 0.5,
+                "IMAGE_NOT_AVAILABLE_THRESH": 50 
             }
         },
         "MAINBOARD_SERAIL": {
@@ -259,7 +325,8 @@
             "VALUE": {
                 "BAUDRATE": 115200,
                 "LEFT_SENSOR_FRAME_ID": "tfmini_left",
-                "RIGHT_SENSOR_FRAME_ID": "tfmini_right"
+                "RIGHT_SENSOR_FRAME_ID": "tfmini_right",
+                "CONNECTION_TIMEOUT": 10.0
             }
         },
         "BH1750": {
