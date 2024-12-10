@@ -1,0 +1,9 @@
+[Unit]
+Description=LTRP ROS launch
+
+[Service]
+ExecStart=/home/odroid/.custom/ltrp.sh
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target

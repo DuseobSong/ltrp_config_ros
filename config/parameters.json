@@ -62,14 +62,16 @@
     },
     "CART_MODE_COMMAND": {
         "DESCRIPTION": "",
-        "LIST": [0, 10, 11, 12, 13, 14],
+        "LIST": [0, 10, 11, 12, 13, 14, 91, 99],
         "VALUE": {
             "CMD_NO_CHANGE": 0,
             "CMD_TO_MANUAL": 10,
             "CMD_TO_FOLLOW": 11,
             "CMD_TO_POS_MODE": 12,
             "CMD_TO_REMOTE": 13,
-            "CMD_TO_VEL_MODE": 14
+            "CMD_TO_VEL_MODE": 14,
+            "CMD_PWR_ON": 91,
+            "CMD_PWR_OFF": 99
         }
     },
     "MODE_FEEDBACK_BYTES": {
@@ -85,14 +87,16 @@
     },
     "CART_CONTROL_MODE": {
         "DESCRIPTION": "",
-        "LIST": [0, 1, 2, 3, 4, 9],
+        "LIST": [0, 1, 2, 3, 4, 9, 91, 99],
         "VALUE": {
             "CON_MODE_MANUAL": 0,
             "CON_MODE_VEL": 1,
             "CON_MODE_FOLLOW": 2,
             "CON_MODE_POS": 3, 
             "CON_MODE_REMOTE": 4,
-            "CON_MODE_ERROR": 9
+            "CON_MODE_ERROR": 9,
+            "CON_CART_PWR_ON": 91,
+            "CON_CART_PWR_OFF": 99
         }
     },
     "CAMERA_DIRECTION": {
@@ -146,10 +150,11 @@
                 "SYSTEM_RESET_CODE": 98,
                 "SYSTEM_RESET_SUCCESS": 88,
                 "SYSTEM_RESET_FAILED": 89,
+                "ACTIVE_SIDE_CAM_DIR": 3,
                 "DEFAULT_ERR_CODE": 0,
                 "DEFAULT_CON_MODE": 0,
                 "DEFAULT_ROTATION_FLAG": 1,
-                "ACTIVE_SIDE_CAM_DIR": 3,
+                "ENCODER_ODOMETRY": 0,
                 "NODE_STATE_ONLINE": 1,
                 "NODE_STATE_OFFLINE": 2,
                 "NODE_STATE_ERROR": 9
@@ -225,7 +230,8 @@
                 "LINEAR_VELOCITY_CALC_COEFF": 1.2,
                 "ANGULAR_VELOCITY_CALC_COEFF": 1.5,
                 "DRIVE_SCENARIO_CATEGORY": 1,
-                "STATIC_OBSTACLE_WAIT_TIME": 10.0
+                "STATIC_OBSTACLE_WAIT_TIME": 10.0,
+                "STEPWISE_DISTANCE": 3.0
             }
         },
         "LINE_DETECT": {
@@ -297,15 +303,23 @@
             "DESCRIPTION": "",
             "LIST": [],
             "VALUE": {
-                
+                "TILT_ANGLE": -45.0,
+                "INSTALLATION_HEIGHT": 1.05,
+                "CWS_CUBE_DIM": [ -1.20, 0.0, -0.40, 0.40, 0.05, 1.20],
+                "OBSTACLE_THRESHOLD": 5
             }
         },
         "EXTERNAL_BUTTON": {
             "DESCRIPTION": "",
             "LIST": [],
             "VALUE": {
-                "BTN_SIGNAL_IN": 1,
-                "BTN_LIGHT_OUT": 15,
+                "CART_PWR_RELAY": 8,
+                "CART_STATE_SIGNAL_IN": 26,
+                "BTN_SIGNAL_IN": 16,
+                "BTN_LED1_OUT": 10,
+                "BTN_LED2_OUT": 12,
+                "BTN_LED3_OUT": 13,
+                "BTN_LED4_OUT": 14,
                 "BTN_TOGGLE_TIMEOUT": 3.0,
                 "BTN_SYSTEM_RESET_TIMEOUT": 10.0,
                 "BTN_TOGGLE_LINE_TRACER_TIMEOUT": 3.0,
@@ -313,8 +327,8 @@
                 "IDLE_BLINK_INTERVAL": 2.0,
                 "FOLLOW_BLINK_INTERVAL_1": 0.25,
                 "FOLLOW_BLINK_INTERVAL_2": 0.75,
-                "REMOTE_BLINK_INTERVAL_1": 0.1,
-                "REMOTE_BLINK_INTERVAL_2": 1.0,
+                "REMOTE_BLINK_INTERVAL_1": 0.05,
+                "REMOTE_BLINK_INTERVAL_2": 0.8,
                 "ERROR_BLINK_INTERVAL": 0.25,
                 "SYSTEM_LOADING_BLINK_INTERVAL": 0.1
             }
@@ -333,7 +347,7 @@
             "DESCRIPTION": "",
             "LIST": [],
             "VALUE": {
-                "I2C_CHANNEL": 0,
+                "I2C_CHANNEL": 1,
                 "I2C_ADDRESS": 35
             }
         },

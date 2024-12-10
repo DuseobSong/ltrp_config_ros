@@ -1,0 +1,14 @@
+[Unit]
+Description=LTRP IP TRANSMITTER
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 -u ip_transmitter.py
+WorkingDirectory=/home/odroid/.custom
+StandardOutput=inherit
+StandardError=inherit
+Restart=no
+User=odroid
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="ltrp">
+    <material name="frame_color">
+        <color rgba="0.5 0.5 0.5 1"/>
+    </material>
+
+    <material name="wheel_color">
+        <color rgba="0.2 0.2 0.2 1"/>
+    </material>
+
+    <material name="lidar_color">
+        <color rgba="0.1 0.1 0.1 1"/>
+    </material>
+
+    <link name="base_footprint"/>
+
+    <link name="base_link"/>
+
+    <link name="left_wheel"/>
+    
+    <link name="right_wheel"/>
+
+    <link name="left_caster"/>
+
+    <link name="right_caster"/>
+
+    <link name="imu_link"/>
+
+    <link name="left_range_sensor"/>
+
+    <link name="right_range_sensor"/>
+
+    <link name="central_camera"/>
+
+    <link name="left_camera"/>
+
+    <link name="right_camera"/>
+
+    <link name="lidar_main">
+        <!-- <inertial>
+            <origin
+                xyz="9.2203E-06 7.9132E-05 -0.025681"
+                rpy="0 0 0" />
+            <mass value="0.053604"/>
+            <inertia
+                ixx="2.2348E-05"
+                ixy="9.4158E-08"
+                ixz="-2.1314E-08"
+                iyy="2.2179E-05"
+                iyz="-5.2609E-09"
+                izz="4.06E-05"/>
+        </inertial>
+
+        <visual name="visual">
+            <origin
+                xyz="0 0 0"
+                rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://ltrp_config_ros/meshes/RPLidar_FL.STL"/>
+            </geometry>
+            <material name="lidar_color"/>
+        </visual>
+
+        <collision name="collision">
+            <origin
+                xyz="0 0 0"
+                rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://ltrp_config_ros/meshes/RPlidar_FL.STL"/>
+            </geometry>
+        </collision> -->
+    </link>
+    
+    <link name="lidar_sub">
+        <!-- <inertial>
+            <origin
+                xyz="9.2203E-06 7.9132E-05 -0.025681"
+                rpy="0 0 0" />
+            <mass value="0.053604"/>
+            <inertia
+                ixx="2.2348E-05"
+                ixy="9.4158E-08"
+                ixz="-2.1314E-08"
+                iyy="2.2179E-05"
+                iyz="-5.2609E-09"
+                izz="4.06E-05"/>
+        </inertial>
+
+        <visual name="visual">
+            <origin
+                xyz="0 0 0"
+                rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://ltrp_config_ros/meshes/RPlidar.stl"/>
+            </geometry>
+            <material name="lidar_color"/>
+        </visual>
+
+        <collision name="collision">
+            <origin
+                xyz="0 0 0"
+                rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://ltrp_config_ros/meshes/RPlidar.stl"/>
+            </geometry>
+        </collision> -->
+    </link>
+
+    <joint name="JOINT_BASE" type="fixed">
+        <origin
+            xyz="0.0 0.0 0.0"
+            rpy="0.0 0.0 0.0"/>
+        <parent link="base_footprint"/>
+        <child link="base_link"/>
+    </joint>
+
+    <joint name="JOINT_IMU" type="fixed">
+        <origin
+            xyz="0.0 0.0 0.0"
+            rpy="0.0 0.0 0.0"/>
+        <parent link="base_link"/>
+        <child link="imu_link"/>
+    </joint>
+
+    <joint name="JOINT_WHEEL_LEFT" type="continuous">
+        <origin 
+            xyz="0.0 0.3 0.1397"
+            rpy="0.0 0.0 0.0"/>
+        <parent link="base_link"/>
+        <child link="left_wheel"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    <joint name="JOINT_WHEEL_RIGHT" type="continuous">
+        <origin 
+            xyz="0.0 -0.3 0.1397"
+            rpy="0.0 0.0 0.0"/>
+        <parent link="base_link"/>
+        <child link="right_wheel"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    <joint name="JOINT_CASTER_LEFT" type="continuous">
+        <origin 
+            xyz="0.4 0.25 0.0762"
+            rpy="0.4 0.0 0.0"/>
+        <parent link="base_link"/>
+        <child link="left_caster"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    <joint name="JOINT_CASTER_RIGHT" type="continuous">
+        <origin 
+            xyz="0.4 -0.25 0.0762"
+            rpy="0.0 0.0 0.0"/>
+        <parent link="base_link"/>
+        <child link="right_caster"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    <joint name="JOINT_RANGE_SENSOR_LEFT" type="fixed">
+        <origin
+            xyz="0.15 0.25 0.8"
+            rpy="0.0 0.52359866 1.570796"/>
+        <parent link="base_link"/>
+        <child link="left_range_sensor"/>
+    </joint>
+
+    <joint name="JOINT_RANGE_SENSOR_RIGHT" type="fixed">
+        <origin
+            xyz="0.15 -0.25 0.8"
+            rpy="0.0 0.52359866 -1.570796"/>
+        <parent link="base_link"/>
+        <child link="right_range_sensor"/>
+    </joint>
+
+    <joint name="JOINT_LIDAR_MAIN" type="fixed">
+        <origin
+            xyz="0.15 0.0 0.85"
+            rpy="0.0 0.0 3.141592"/>
+        <parent link="base_link"/>
+        <child link="lidar_main"/>
+    </joint>
+
+    <joint name="JOINT_SUB_LIDAR" type="fixed">
+        <origin
+            xyz="0.25 0.0 1.0"
+            rpy="0.0 -0.785398 3.141592"/>
+        <parent link="base_link"/>
+        <child link="lidar_sub"/>
+    </joint>
+
+    <joint name="JOINT_CENTRAL_CAMERA" type="fixed">
+        <origin 
+            xyz="0.2 0.0 0.95"
+            rpy="0.0 0.392699 0.0"/>
+        <parent link="base_link"/>
+        <child link="central_camera"/>
+    </joint>
+
+    <joint name="JOINT_LEFT_CAMERA" type="fixed">
+        <origin
+            xyz="0.1 0.2 0.95"
+            rpy="0.0 0.392699 1.570796"/>
+        <parent link="base_link"/>
+        <child link="left_camera"/>
+    </joint>
+
+    <joint name="JOINT_RIGHT_CAMERA" type="fixed">
+        <origin
+            xyz="0.1 -0.2 0.95"
+            rpy="0.0 0.392699 -1.570796"/>
+        <parent link="base_link"/>
+        <child link="right_camera"/>
+    </joint>
+</robot>
