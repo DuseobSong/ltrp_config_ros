@@ -4,9 +4,9 @@
     },
     "NODE_CODE": {
         "DESCRIPTION": "",
-        "LIST": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-        "NAME": ["OVERSEER", "MAINBOARD", "DRIVE_CONTROL", "LINE_DETECT", "CWS", "CWS_LOWER", "RANGE_SENSOR", "BH1750", "ULTRASONIC", "EXTERNAL_BUTTON", "RPLIDAR_C1"],
-        "ACTIVATION": [1, 2, 3, 4, 5, 6, 9, 10],
+        "LIST": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 99],
+        "NAME": ["OVERSEER", "MAINBOARD", "DRIVE_CONTROL", "LINE_DETECT", "CWS", "CWS_LOWER", "RANGE_SENSOR", "BH1750", "ULTRASONIC", "EXTERNAL_BUTTON", "RPLIDAR_C1", "LPR", "REMOTE"],
+        "ACTIVATION": [1, 2, 3, 4, 5, 6, 9, 10, 11],
         "VALUE": {
             "OVERSEER": 0,
             "MAINBOARD_SERIAL": 1,
@@ -18,7 +18,9 @@
             "BH1750": 7,
             "ULTRASONIC": 8,
             "EXTERNAL_BUTTON": 9,
-            "RPLIDAR_C1": 10
+            "RPLIDAR_C1": 10,
+            "LPR": 11,
+            "REMOTE": 99
         },
         "ROOT_PKG": {
             "OVERSEER": "ltrp_ros",
@@ -37,7 +39,7 @@
             "OVERSEER": "overseer.py",
             "MAINBOARD_SERIAL": "serial_node_prototype.py",
             "DRIVE_CONTROL": "drive_control_prototype.py",
-            "LINE_DETECT": "capture_prototype.py",
+            "LINE_DETECT": "line_detect_prototype.py",
             "CWS": "cws_lidar_main_prototype.py",
             "CWS_LOWER": "cws_lidar_sub_prototype.py",
             "RANGE_SENSOR": "range_sensor_prototype.py",
@@ -90,10 +92,10 @@
         "LIST": [0, 1, 2, 3, 4, 9, 91, 99],
         "VALUE": {
             "CON_MODE_MANUAL": 0,
-            "CON_MODE_VEL": 1,
-            "CON_MODE_FOLLOW": 2,
-            "CON_MODE_POS": 3, 
-            "CON_MODE_REMOTE": 4,
+            "CON_MODE_FOLLOW": 1,
+            "CON_MODE_POS": 2, 
+            "CON_MODE_REMOTE": 3,
+            "CON_MODE_VEL": 4,
             "CON_MODE_ERROR": 9,
             "CON_CART_PWR_ON": 91,
             "CON_CART_PWR_OFF": 99
@@ -138,6 +140,8 @@
             "REMOTE_MODE_CHANGE_VEL_CON": 12,
             "REMOTE_MODE_CHANGE_VEL_POS": 13,
             "REMOTE_MODE_CHANGE_FOLLOW": 14,
+            "REMOTE_TURN_ON_CART": 91,
+            "REMOTE_TURN_OFF_CART": 92,
             "REMOTE_ACTIVATION": 99
         }
     },
@@ -357,6 +361,13 @@
             "VALUE": {
                 "BAUDRATE": 115200,
                 "PACKET_SIZE": 10
+            }
+        },
+        "LPR": {
+            "DESCRIPTION": "",
+            "LIST": [],
+            "VALUE": {
+                
             }
         }
     },
