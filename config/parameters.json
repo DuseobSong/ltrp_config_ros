@@ -5,7 +5,7 @@
     "NODE_CODE": {
         "DESCRIPTION": "",
         "LIST": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 99],
-        "NAME": ["OVERSEER", "MAINBOARD", "DRIVE_CONTROL", "LINE_DETECT", "CWS", "CWS_LOWER", "RANGE_SENSOR", "BH1750", "ULTRASONIC", "EXTERNAL_BUTTON", "RPLIDAR_C1", "LPR", "REMOTE"],
+        "NAME": ["OVERSEER", "MAINBOARD_SERIAL", "DRIVE_CONTROL", "LINE_DETECT", "CWS", "CWS_LOWER", "RANGE_SENSOR", "BH1750", "ULTRASONIC", "EXTERNAL_BUTTON", "RPLIDAR_C1", "LPR", "REMOTE"],
         "ACTIVATION": [1, 2, 3, 4, 5, 6, 9, 10, 11],
         "VALUE": {
             "OVERSEER": 0,
@@ -137,8 +137,8 @@
             "REMOTE_TURN_RIGHT": 4,
             "REMOTE_STOP": 9,
             "REMOTE_MODE_CHANGE_MANUAL": 11,
-            "REMOTE_MODE_CHANGE_VEL_CON": 12,
-            "REMOTE_MODE_CHANGE_VEL_POS": 13,
+            "REMOTE_MODE_CHANGE_VEL": 12,
+            "REMOTE_MODE_CHANGE_POS": 13,
             "REMOTE_MODE_CHANGE_FOLLOW": 14,
             "REMOTE_TURN_ON_CART": 91,
             "REMOTE_TURN_OFF_CART": 92,
@@ -224,7 +224,7 @@
             "DESCRIPTION": "",
             "LIST": [],
             "VALUE": {
-                "V_LIN_LIM": 0.5,
+                "V_LIN_LIM": 1.5,
                 "V_ANG_LIM": 40,
                 "V_STEP": 0.1,
                 "OMEGA_STEP": 1.0,
@@ -276,7 +276,7 @@
                 "IMAGE_NOT_AVAILABLE_THRESH": 50 
             }
         },
-        "MAINBOARD_SERAIL": {
+        "MAINBOARD_SERIAL": {
             "DESCRIPTION": "",
             "LIST": [],
             "VALUE": {
@@ -410,7 +410,7 @@
             "ZERO_BYTE": 48
         }
     },
-    "MAINBOARD_SERAIL_RX_INDEX": {
+    "MAINBOARD_SERIAL_RX_INDEX": {
         "DESCRIPTION": "",
         "LIST": [0, 1, 24, 28, 32, 36, 40, 44, 48, 49, 229],
         "VALUE": {

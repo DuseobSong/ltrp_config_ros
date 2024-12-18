@@ -192,6 +192,10 @@
         "NAME": "/terminate",
         "TYPE": "std_msgs.msg.empty"
     },
+    "toggle_camera_direction_topic": {
+        "NAME": "/toggle_camera_direction",
+        "TYPE": "std_msgs.msg.UInt8"
+    },
     "ultrasonic_topic": {
         "NAME": "/ultrasonic",
         "TYPE": "std_msgs.msg.UInt8MultiArray"
