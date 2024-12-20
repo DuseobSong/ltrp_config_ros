@@ -88,6 +88,10 @@
         "NAME": "/lidar_sub",
         "TYPE": "sensor_msgs.msg.LaserScan"
     },
+    "lidar_sub_filter_topic": {
+        "NAME": "/lidar_sub/filter",
+        "TYPE": "sensor_msgs.msg.LaserScan"
+    },
     "lp_capture_image_topic": {
         "NAME": "/lp_image",
         "TYPE": "sensor_msgs.msg.Image"

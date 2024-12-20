@@ -1,9 +1,15 @@
+# Directory: /home/odroid/.config/systemd/user/ltrp.service
+# Regist service: $ systemctl --user daemon-reload
+# Command: $ systemctl --user [start, stop, restart, status] ltrp.service
+# Enable auto-start on system boot: $ systemctl --user enable ltrp.service
+# Disable auto-start on system boot: $ systemctl --user disable ltrp.service
+
 [Unit]
-Description=LTRP ROS launch
+Description=LTRP ROS LAUNCH ON BOOT
 
 [Service]
 ExecStart=/home/odroid/.custom/ltrp.sh
 Restart=on-abort
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target
