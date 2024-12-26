@@ -1,2 +1,3 @@
+uint8 NodeCode
 bool ObstacleDetected
 bool EmergencyStop

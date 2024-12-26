@@ -1,0 +1,46 @@
+[Wireless network driver on odroid - rtl8291eu]
+{instruction} : https://askubuntu.com/questions/1156519/cant-install-rtl8192eu-linux-driver-on-ubuntu-18-10
+$ sudo apt install git linux-headers-generic build-essential dkms
+$ git clone https://github.com/Mange/rtl8192eu-linux-driver.git
+$ cd rtl8192eu-linux-driver
+
+# edit Makefile
+    CONFIG_PLATFORM_I386_PC = n
+    CONFIG_PLATFORM_ARM_AARCH64 = y
+
+$ make
+$ sudo make install 
+
+<NOTE> Install with DKMS does not work.
+
+<Trouble shooting>
+1. module 8192eu uses an undifined symbol in kernel_read() from namespace
+{VFS_internal_I_am_really_a_filesysten_and_am_NOT_a_driver}, but not import it.
+Solution: add following declaration before the statement calling to kernel_read()
+
+    kernel_read()
+        MODULE_IMPORT_NS
+        (VFS_internal_I_am_really_a_filesysten_and_am_NOT_a_driver);
+
+[Network interface priority configuration]
+REF: https://snowdeer.github.io/linux/2018/10/13/ubuntu-change-network-priority/ <- only temporary (reset by reboot)
+$ sudo apt install ifmetric
+$ route -n  # Check metric of each network interface
+#  sudo nmcli con mode "{CONNECTION_NAME}" ipv4.route-metric {VALUE} <- changes priority permanently
+#  sudo nmcli con mode "{CONNECTION_NAME}" ipv6.route-metric {VALUE} <- changes priority permanently
+$ sudo nmcli con mode "Profile 1" ipv4.route-metric 21000
+$ sudo nmcli con mode "Profile 1" ipv6.route-metric 21000
+
+[Automatic ROS_HOSTNAME setting]
+# Check if network connected
+$ iw wlan0 link | grep -w Connected
+
+# Retrieve WiFi SSID
+$ iw wlan0 link | grep -w SSID
+
+# Retrieve IP address
+$ echo $(ifconfig | grep -w inet | tail -1 | awk '{print $2}')
+
+[Trouble shooting]
+# 1. Could not get lock /var/lib/apt/lists/lock. It is held by process ####
+$ sudo rm /var/lib/apt/lists/lock

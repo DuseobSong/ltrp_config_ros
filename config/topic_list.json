@@ -66,7 +66,7 @@
     },
     "forced_stop_topic": {
         "NAME": "/forced_stop",
-        "TYPE": "std_msgs.msg.Empty"
+        "TYPE": "std_msgs.msg.Bool"
     },
     "guide_line_missing_topic": {
         "NAME": "/guide_line_missing",
@@ -103,6 +103,10 @@
     "lp_capture_status_topic": {
         "NAME": "/lp_capture_state",
         "TYPE": "std_msgs.msg.Bool"
+    },
+    "marker_detection_topic": {
+        "NAME": "/marker_detection",
+        "TYPE": "std_msgs.msg.UInt8"
     },
     "motor_driver_feedback_topic": {
         "NAME": "/mtr_drv_feedback",

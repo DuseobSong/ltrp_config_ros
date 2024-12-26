@@ -109,6 +109,62 @@
             "CAM_DIR_RIGHT": 5
         }
     },
+    "DIRECTION": {
+        "DESCRIPTION": "",
+        "LIST": [1, 2, 3, 4, 5, 6, 7, 9],
+        "VALUE": {
+            "LEFT": 1,
+            "RIGHT": 2,
+            "UP": 3,
+            "DOWN": 5,
+            "FORWARD": 6,
+            "BACKWARD": 7,
+            "CENTER": 9
+        }
+    },
+    "DRIVE_SCENARIO_CATEGORY": {
+        "DESCRIPTION": "",
+        "LIST": [],
+        "VALUE": {
+            "DISTANCE": 1,
+            "MARKER_AND_DETECTION": 2,
+            "DETECTION": 3
+        }
+    },
+    "DRIVE_STATE": {
+        "DESCRIPTION": "",
+        "LIST": [],
+        "VALUE": {
+            "MAUNAL": 0,
+            "LINE_TRACKING": 1,
+            "ROTATION": 2, 
+            "PAUSE": 3,
+            "GUIDE_LINE_MISSING": 5,
+            "CWS": 8,
+            "E_STOP": 9,
+            "SYSTEM_ERROR": 99
+        }
+    },
+    "LIDAR_INDEX": {
+        "DESCRIPTION": "",
+        "LIST": [0, 1, 2, 3],
+        "VALUE": {
+            "2D_LIDAR_MAIN": 0,
+            "2D_LIDAR_SUB": 1,
+            "1D_LIDAR_LEFT": 2,
+            "1D_LIDAR_RIGHT": 3
+        }
+    },
+    "MARKER_TYPE": {
+        "DESCRIPTION": "",
+        "LIST": [0, 1, 2, 3],
+        "VALUE": {
+            "NONE": 0,
+            "GUIDE_LINE": 1,
+            "END_POINT": 2,
+            "HALT": 3
+        }
+    },
     "ROTATION_STATE": {
         "DESCRIPTION": "",
         "LIST": [1, 2, 3, 4],
@@ -161,7 +217,8 @@
                 "ENCODER_ODOMETRY": 0,
                 "NODE_STATE_ONLINE": 1,
                 "NODE_STATE_OFFLINE": 2,
-                "NODE_STATE_ERROR": 9
+                "NODE_STATE_ERROR": 9,
+                "RANGE_SENSOR_AVAILABLE": 1
             }
         },
         "OVERSEER": {
@@ -233,9 +290,13 @@
                 "ROTATION_ANGULAR_VELOCITY": 20.0,
                 "LINEAR_VELOCITY_CALC_COEFF": 1.2,
                 "ANGULAR_VELOCITY_CALC_COEFF": 1.5,
-                "DRIVE_SCENARIO_CATEGORY": 1,
+                "DRIVE_SCENARIO": 2,
                 "STATIC_OBSTACLE_WAIT_TIME": 10.0,
-                "STEPWISE_DISTANCE": 3.0
+                "START_DELAY": 3.0,
+                "STEPWISE_DISTANCE_THRESHOLD": 3.0,
+                "TARGET_RANGE_SENSOR": 1,
+                "DETECTION_CNT_THRESHOLD": 10,
+                "RANGE_SENSOR_THRESHOLD": 4.0
             }
         },
         "LINE_DETECT": {
@@ -310,7 +371,9 @@
                 "TILT_ANGLE": -45.0,
                 "INSTALLATION_HEIGHT": 1.05,
                 "CWS_CUBE_DIM": [-1.20, 0.0, -0.40, 0.40, 0.05, 1.20],
-                "OBSTACLE_THRESHOLD": 5
+                "OBSTACLE_THRESHOLD": 5,
+                "STATIC_OBSTACLE_WAIT_TIME": 5.0,
+                "RESUME_WAIT_TIME": 3.0
             }
         },
         "EXTERNAL_BUTTON": {
@@ -319,6 +382,7 @@
             "VALUE": {
                 "CART_PWR_RELAY": 8,
                 "CART_STATE_SIGNAL_IN": 26,
+                "ESTOP_SIGNAL_IN": 5,
                 "BTN_SIGNAL_IN": 16,
                 "BTN_LED1_OUT": 10,
                 "BTN_LED2_OUT": 12,

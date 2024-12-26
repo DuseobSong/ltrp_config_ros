@@ -1,0 +1,22 @@
+[rtl8291eu]
+{instruction guide} : https://askubuntu.com/questions/1156519/cant-install-rtl8192eu-linux-driver-on-ubuntu-18-10
+$ sudo apt install git linux-headers-generic build-essential dkms
+$ git clone https://github.com/Mange/rtl8192eu-linux-driver.git
+$ cd rtl8192eu-linux-driver
+
+	edit Makefile
+		CONFIG_PLATFORM_I386_PC = n
+		CONFIG_PLATFORM_ARM_AARCH64 = y
+
+$ make
+$ sudo make install
+	<NOTE: Install with DKMS does not work
+
+<Trouble shooting>
+1. module 8192eu uses symbol kernel_read from namespace VFS_internal_I_am_really_a_filesystem_and_am_NOT_a_driver, but not import it.
+Solution : add following declaration before the statement calling to kernel_read()
+	MODULE_IMPORT_NS(VFS_internal_I_am_really_a_filesystem_and_am_NOT_a_driver);
+
+[network setting]
+ - USE nmtui
+
