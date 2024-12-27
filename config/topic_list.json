@@ -96,13 +96,13 @@
         "NAME": "/lp_image",
         "TYPE": "sensor_msgs.msg.Image"
     },
-    "lp_capture_start_topic": {
-        "NAME": "/lp_capture_start",
+    "lp_capture_topic": {
+        "NAME": "/lp_capture",
         "TYPE": "std_msgs.msg.Bool"
     },
-    "lp_capture_status_topic": {
-        "NAME": "/lp_capture_state",
-        "TYPE": "std_msgs.msg.Bool"
+    "lp_capture_result_topic": {
+        "NAME": "/lp_capture_result",
+        "TYPE": "std_msgs.msg.UInt8"
     },
     "marker_detection_topic": {
         "NAME": "/marker_detection",

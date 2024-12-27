@@ -105,9 +105,8 @@
         "DESCRIPTION": "",
         "LIST": [3, 5],
         "VALUE": {
-            "CAM_DIR_LEFT": 1,
-            "CAM_DIR_RIGHT": 2,
-            "CAM_DIR_LEFT_AND_RIGHT": 3
+            "CAM_DIR_LEFT": 3,
+            "CAM_DIR_RIGHT": 5
         }
     },
     "DIRECTION": {
@@ -156,65 +155,14 @@
             "1D_LIDAR_RIGHT": 3
         }
     },
-    "LP_CAPTURE_RESULT": {
-        "DESCRIPTION": "",
-        "LIST": [0, 1, 2, 4, 8],
-        "VALUE": {
-            "IMAGE_NOT_AVAILABLE": 0,
-            "LEFT_CAM_IMAGE_CAPTURED": 1,
-            "LEFT_CAM_IMAGE_UPLOADED": 2,
-            "RIGHT_CAM_IMAGE_CAPTURED": 4,
-            "RIGHT_CAM_IMAGE_UPLOADED": 8
-        }
-    },
     "MARKER_TYPE": {
         "DESCRIPTION": "",
         "LIST": [0, 1, 2, 3],
         "VALUE": {
-            "NONE": {
-                "CODE": 0,
-                "SIZE": 0,
-                "SHAPE": "NONE",
-                "BGR_MIN": [0, 0, 0],
-                "BGR_MAX": [0, 0, 0],
-                "HSV_MIN": [0, 0, 0],
-                "HSV_MAX": [0, 0, 0],
-                "YCRCB_MIN": [0, 0, 0],
-                "YCRCB_MAX": [0, 0, 0]
-            },
-            "GUIDE_LINE": {
-                "CODE": 1,
-                "SIZE": 40,
-                "SHAPE": "LINE",
-                "BGR_MIN": [0, 0, 0],
-                "BGR_MAX": [0, 0, 0],
-                "HSV_MIN": [0, 0, 0],
-                "HSV_MAX": [0, 0, 0],
-                "YCRCB_MIN": [0, 0, 0],
-                "YCRCB_MAX": [0, 0, 0]
-            },
-            "END_POINT": {
-                "CODE": 2,
-                "SIZE": 40,
-                "SHAPE": "CIRCLE",
-                "BGR_MIN": [0, 0, 0],
-                "BGR_MAX": [0, 0, 0],
-                "HSV_MIN": [0, 0, 0],
-                "HSV_MAX": [0, 0, 0],
-                "YCRCB_MIN": [0, 0, 0],
-                "YCRCB_MAX": [0, 0, 0]
-            },
-            "ACTION": {
-                "CODE": 3,
-                "SIZE": 40,
-                "SHAPE": "RECTANGLE",
-                "BGR_MIN": [0, 0, 0],
-                "BGR_MAX": [0, 0, 0],
-                "HSV_MIN": [0, 0, 0],
-                "HSV_MAX": [0, 0, 0],
-                "YCRCB_MIN": [0, 0, 0],
-                "YCRCB_MAX": [0, 0, 0]
-            }
+            "NONE": 0,
+            "GUIDE_LINE": 1,
+            "END_POINT": 2,
+            "HALT": 3
         }
     },
     "ROTATION_STATE": {
@@ -483,21 +431,7 @@
             "DESCRIPTION": "",
             "LIST": [],
             "VALUE": {
-                "USER": "ttng",
-                "PSWD": "1q2w3e4r",
-                "LEFT_IP_ADDR": "192.168.2.111",
-                "RIGHT_IP_ADDR": "192.168.2.112",
-                "PORT": 554,
-                "LEFT_CAMERA_THREAD_TIMEOUT": 0.5,
-                "RIGHT_CAMERA_THREAD_TIMEOUT": 0.5,
-                "INIT_TIMEOUT": 10.0,
-                "LEFT_CAM_SRC_WIDTH": 1920,
-                "LEFT_CAM_SRC_HEIGHT": 720,
-                "RIGHT_CAM_SRC_WIDTH": 1920,
-                "RIGHT_CAM_SRC_HEIGHT": 720,
-                "RESIZED_WIDTH": 1920,
-                "RESIZED_HEIGHT": 720,
-                "IMAGE_NOT_AVAILABLE_THRESH": 10
+                
             }
         }
     },
