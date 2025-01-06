@@ -22,6 +22,8 @@ add_message_files(
   LineDetectionComputingTime.msg
   Obstacle.msg
   Overseer.msg
+  Marker.msg
+  MarkerDetection.msg
   NodeReady.msg
   NodeRespawnResult.msg
   RangeData.msg

@@ -106,8 +106,7 @@
         "LIST": [3, 5],
         "VALUE": {
             "CAM_DIR_LEFT": 1,
-            "CAM_DIR_RIGHT": 2,
-            "CAM_DIR_LEFT_AND_RIGHT": 3
+            "CAM_DIR_RIGHT": 2
         }
     },
     "DIRECTION": {
@@ -136,7 +135,7 @@
         "DESCRIPTION": "",
         "LIST": [],
         "VALUE": {
-            "MAUNAL": 0,
+            "MANUAL": 0,
             "LINE_TRACKING": 1,
             "ROTATION": 2, 
             "PAUSE": 3,
@@ -187,11 +186,11 @@
                 "SIZE": 40,
                 "SHAPE": "LINE",
                 "BGR_MIN": [0, 0, 0],
-                "BGR_MAX": [0, 0, 0],
-                "HSV_MIN": [0, 0, 0],
-                "HSV_MAX": [0, 0, 0],
+                "BGR_MAX": [255, 255, 255],
+                "HSV_MIN": [20, 0, 150],
+                "HSV_MAX": [60, 255, 255],
                 "YCRCB_MIN": [0, 0, 0],
-                "YCRCB_MAX": [0, 0, 0]
+                "YCRCB_MAX": [255, 255, 100]
             },
             "END_POINT": {
                 "CODE": 2,
@@ -262,7 +261,8 @@
                 "SYSTEM_RESET_CODE": 98,
                 "SYSTEM_RESET_SUCCESS": 88,
                 "SYSTEM_RESET_FAILED": 89,
-                "ACTIVE_SIDE_CAM_DIR": 3,
+                "ACTIVE_SIDE_CAM_DIR":2,
+                "SIDE_CAM_SWITCHING": 1,
                 "DEFAULT_ERR_CODE": 0,
                 "DEFAULT_CON_MODE": 0,
                 "DEFAULT_ROTATION_FLAG": 1,
@@ -333,10 +333,11 @@
             "DESCRIPTION": "",
             "LIST": [],
             "VALUE": {
-                "V_LIN_LIM": 1.5,
+                "V_LIN_LOWER_LIM": 0.0,
+                "V_LIN_UPPER_LIM": 0.7,
                 "V_ANG_LIM": 40,
                 "V_STEP": 0.1,
-                "OMEGA_STEP": 1.0,
+                "OMEGA_STEP": 5.0,
                 "ROTATION_DIR": 1,
                 "ROTATION_MARGIN": 10.0,
                 "ROTATION_ANGULAR_VELOCITY": 20.0,
@@ -370,22 +371,11 @@
                 "ADDR": "192.168.2.110",
                 "PORT": 554,
                 "FRAME_SKIP": 3,
-                "Y_LOWER_THRESHOLD": 0,
-                "Y_UPPER_THRESHOLD": 255,
-                "CR_LOWER_THRESHOLD": 0,
-                "CR_UPPER_THRESHOLD": 255,
-                "CB_LOWER_THRESHOLD": 0,
-                "CB_UPPER_THRESHOLD": 100,
-                "H_LOWER_THRESHOLD": 20,
-                "H_UPPER_THRESHOLD": 60,
-                "S_LOWER_THRESHOLD": 0,
-                "S_UPPER_THRESHOLD": 255,
-                "V_LOWER_THRESHOLD": 150,
-                "V_UPPER_THRESHOLD": 255,
                 "MODEL": "DH-IPC-HDBW1431E",
                 "INIT_TIMEOUT": 120.0,
-                "CAP_THREAD_TIMEOUT": 0.2,
-                "DET_THREAD_TIMEOUT": 0.5,
+                "CAP_THREAD_TIMEOUT": 0.4,
+                "GUIDE_LINE_DET_THREAD_TIMEOUT": 0.3,
+                "MARKER_DET_THREAD_TIMEOUT": 0.3,
                 "IMAGE_NOT_AVAILABLE_THRESH": 50 
             }
         },
@@ -488,8 +478,7 @@
                 "LEFT_IP_ADDR": "192.168.2.111",
                 "RIGHT_IP_ADDR": "192.168.2.112",
                 "PORT": 554,
-                "LEFT_CAMERA_THREAD_TIMEOUT": 0.5,
-                "RIGHT_CAMERA_THREAD_TIMEOUT": 0.5,
+                "CAMERA_THREAD_TIMEOUT": 0.5,
                 "INIT_TIMEOUT": 10.0,
                 "LEFT_CAM_SRC_WIDTH": 1920,
                 "LEFT_CAM_SRC_HEIGHT": 720,

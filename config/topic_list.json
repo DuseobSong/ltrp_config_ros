@@ -40,6 +40,10 @@
         "NAME": "/detection",
         "TYPE": "ltrp_config_ros.msg.Detection"
     },
+    "detected_marker_topic": {
+        "NAME": "/detected_marker",
+        "TYPE": "ltrp_config_ros.msg.MarkerDetection"
+    },
     "detected_target_topic": {
         "NAME": "/detected_target",
         "TYPE": "ltrp_config_ros.msg.Target"    

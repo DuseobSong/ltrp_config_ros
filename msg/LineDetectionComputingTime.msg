@@ -1,4 +1,6 @@
-float64 DetectionCnt
-float64 ThresholdingTime
-float64 DetectionTime
-float64 ComputingTime
+float64 LineDetectionCnt
+float64 LineDetectionTime
+float64 EndPointDetectionCnt
+float64 EndPointDetectionTime
+float64 ActionMarkerDetectionCnt
+float64 ActionMarkerDetectionTime
