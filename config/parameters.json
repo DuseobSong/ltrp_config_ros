@@ -197,22 +197,22 @@
                 "SIZE": 40,
                 "SHAPE": "CIRCLE",
                 "BGR_MIN": [0, 0, 0],
-                "BGR_MAX": [0, 0, 0],
+                "BGR_MAX": [1, 1, 1],
                 "HSV_MIN": [0, 0, 0],
-                "HSV_MAX": [0, 0, 0],
+                "HSV_MAX": [1, 1, 1],
                 "YCRCB_MIN": [0, 0, 0],
-                "YCRCB_MAX": [0, 0, 0]
+                "YCRCB_MAX": [1, 1, 1]
             },
             "ACTION": {
                 "CODE": 3,
                 "SIZE": 40,
                 "SHAPE": "RECTANGLE",
                 "BGR_MIN": [0, 0, 0],
-                "BGR_MAX": [0, 0, 0],
+                "BGR_MAX": [1, 1, 1],
                 "HSV_MIN": [0, 0, 0],
-                "HSV_MAX": [0, 0, 0],
+                "HSV_MAX": [1, 1, 1],
                 "YCRCB_MIN": [0, 0, 0],
-                "YCRCB_MAX": [0, 0, 0]
+                "YCRCB_MAX": [1, 1, 1]
             }
         }
     },
