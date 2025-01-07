@@ -11,6 +11,7 @@ float64 CmdVelLin
 float64 CmdVelAng
 bool ObstacleDetection
 bool CWS
+bool RemoteControl
 uint64 ReceivedBytes
 uint64 ValidBytes
 float64 TargetX

@@ -142,6 +142,7 @@
             "GUIDE_LINE_MISSING": 5,
             "CWS": 8,
             "E_STOP": 9,
+            "REMOTE": 80,
             "SYSTEM_ERROR": 99
         }
     },
@@ -370,12 +371,12 @@
                 "PSWD": "1q2w3e4r",
                 "ADDR": "192.168.2.110",
                 "PORT": 554,
-                "FRAME_SKIP": 3,
+                "FRAME_SKIP": 10,
                 "MODEL": "DH-IPC-HDBW1431E",
                 "INIT_TIMEOUT": 120.0,
                 "CAP_THREAD_TIMEOUT": 0.4,
-                "GUIDE_LINE_DET_THREAD_TIMEOUT": 0.3,
-                "MARKER_DET_THREAD_TIMEOUT": 0.3,
+                "GUIDE_LINE_DET_THREAD_TIMEOUT": 0.5,
+                "MARKER_DET_THREAD_TIMEOUT": 0.5,
                 "IMAGE_NOT_AVAILABLE_THRESH": 50 
             }
         },

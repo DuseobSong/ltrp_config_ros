@@ -20,6 +20,10 @@
         "NAME": "/camera_direction",
         "TYPE": "std_msgs.msg.UInt8"
     },
+    "camera_monitoring_topic": {
+        "NAME": "/camera_monitoring",
+        "TYPE": "std_msgs.msg.Bool"
+    },
     "central_camera_topic": {
         "NAME": "/central_camera",
         "TYPE": "sensor_msgs.msg.Image"
