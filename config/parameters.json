@@ -128,7 +128,8 @@
         "VALUE": {
             "DISTANCE": 1,
             "MARKER_AND_DETECTION": 2,
-            "DETECTION": 3
+            "DETECTION": 3,
+            "PURE_LINE_TRACKING": 4
         }
     },
     "DRIVE_STATE": {
