@@ -100,6 +100,10 @@
         "NAME": "/lidar_sub/filter",
         "TYPE": "sensor_msgs.msg.LaserScan"
     },
+    "line_mask_topic": {
+        "NAME": "/line_mask",
+        "TYPE": "sensor_msgs.msg.Image"
+    },
     "lp_capture_image_topic": {
         "NAME": "/lp_image",
         "TYPE": "sensor_msgs.msg.Image"
@@ -115,6 +119,10 @@
     "marker_detection_topic": {
         "NAME": "/marker_detection",
         "TYPE": "std_msgs.msg.UInt8"
+    },
+    "marker_mask_topic": {
+        "NAME": "/marker_mask",
+        "TYPE": "sensor_msgs.msg.Image"
     },
     "motor_driver_feedback_topic": {
         "NAME": "/mtr_drv_feedback",
