@@ -1,3 +1,4 @@
+float64 Total
 float64 CaptureCount
 float64 CaptureTime
 float64 ResizeTime

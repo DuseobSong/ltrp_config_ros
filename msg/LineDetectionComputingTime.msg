@@ -1,3 +1,4 @@
+float64 Total
 float64 LineDetectionCnt
 float64 LineDetectionTime
 float64 EndPointDetectionCnt
