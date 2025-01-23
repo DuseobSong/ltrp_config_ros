@@ -1,0 +1,10 @@
+uint64 LeftDetectionCount
+uint64 LeftCaptureCount
+uint8 LeftCaprureResult
+uint64 LeftImageUploadCount
+uint8 LeftImageUploadResult
+uint64 RightDetectionCount
+uint64 RightCaptureCount
+uint8 RightCaptureResult
+uint64 RightImageUploadCount
+uint64 RightImageUploadResult

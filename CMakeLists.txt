@@ -19,6 +19,7 @@ add_message_files(
   Feedback.msg
   Illumination.msg
   ImageProcessingComputingTime.msg
+  ImageUploadResult.msg
   LineDetectionComputingTime.msg
   Obstacle.msg
   Overseer.msg

@@ -76,6 +76,10 @@
         "NAME": "/forced_stop",
         "TYPE": "std_msgs.msg.Bool"
     },
+    "gnss_topic": {
+        "NAME": "/gnss",
+        "TYPE": "ltrp_config_ros.msg.RTK"
+    },
     "guide_line_missing_topic": {
         "NAME": "/guide_line_missing",
         "TYPE": "std_msgs.msg.Bool"
@@ -114,7 +118,7 @@
     },
     "lp_capture_result_topic": {
         "NAME": "/lp_capture_result",
-        "TYPE": "std_msgs.msg.UInt8"
+        "TYPE": "std_msgs.msg.UInt8MultiArray"
     },
     "marker_detection_topic": {
         "NAME": "/marker_detection",

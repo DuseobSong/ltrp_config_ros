@@ -1,5 +1,5 @@
 {
-    "MAX_ERR_CODE": 38,
+    "MAX_ERR_CODE": 39,
     "0": "No error",
     "1": "Malfunction",
     "2": "Failed to load error code list.",
@@ -39,6 +39,7 @@
     "36": "Guide line and marker detection thread vital check failed.",
     "37": "Left camera thread is not initiated.",
     "38": "Right camera thread is not initiated.",
+    "39": "Image server not available.",
     "ERR_NO_ERROR": 0,
     "ERR_MAL_FUNCTION": 1,
     "ERR_ERROR_CODE_LOADING_FAILED": 2,
@@ -77,5 +78,6 @@
     "ERR_CAP_AND_MARKER_DETECTION_VITAL_CHK_FAILED": 35,
     "ERR_GUIDE_LINE_AND_MARKER_DETECTION_THREAD_VITAL_CHK_FAILED": 36,
     "ERR_LEFT_CAMERA_THREAD_VITAL_CHK_FAILED": 37,
-    "ERR_RIGHT_CAMERA_THREAD_VITAL_CHK_FAILED": 38
+    "ERR_RIGHT_CAMERA_THREAD_VITAL_CHK_FAILED": 38,
+    "ERR_IMG_SERVER_NOT_AVAILABLE": 39
 } 

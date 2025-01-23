@@ -103,10 +103,11 @@
     },
     "CAMERA_DIRECTION": {
         "DESCRIPTION": "",
-        "LIST": [3, 5],
+        "LIST": [1, 2, 3],
         "VALUE": {
             "CAM_DIR_LEFT": 1,
-            "CAM_DIR_RIGHT": 2
+            "CAM_DIR_RIGHT": 2,
+            "CAM_DIR_BOTH":3
         }
     },
     "DIRECTION": {
@@ -159,13 +160,14 @@
     },
     "LP_CAPTURE_RESULT": {
         "DESCRIPTION": "",
-        "LIST": [0, 1, 2, 4, 8],
+        "LIST": [0, 1, 2, 3, 4, 5],
         "VALUE": {
-            "IMAGE_NOT_AVAILABLE": 0,
-            "LEFT_CAM_IMAGE_CAPTURED": 1,
-            "LEFT_CAM_IMAGE_UPLOADED": 2,
-            "RIGHT_CAM_IMAGE_CAPTURED": 4,
-            "RIGHT_CAM_IMAGE_UPLOADED": 8
+            "LEFT_CAM_IMAGE_CAPTURED": 0,
+            "LEFT_CAM_IMAGE_UPLOADED": 1,
+            "RIGHT_CAM_IMAGE_CAPTURED": 2,
+            "RIGHT_CAM_IMAGE_UPLOADED": 3,
+            "LEFT_IMAGE_NOT_AVAILABLE": 4,
+            "RIGHT_IMAGE_NOT_AVAILABLE": 5
         }
     },
     "MARKER_TYPE": {
@@ -238,7 +240,7 @@
     },
     "REMOTE_CONTROL_COMMAND": {
         "DESCRIPTION": "",
-        "LIST": [1, 2, 3, 4, 9, 11, 12, 13, 14, 99],
+        "LIST": [1, 2, 3, 4, 9, 11, 12, 13, 14, 21, 22, 91, 92, 99],
         "VALUE": {
             "REMOTE_ACCELERATE": 1,
             "REMOTE_DECELERATE": 2,
@@ -249,6 +251,8 @@
             "REMOTE_MODE_CHANGE_VEL": 12,
             "REMOTE_MODE_CHANGE_POS": 13,
             "REMOTE_MODE_CHANGE_FOLLOW": 14,
+            "REMOTE_ROTATE_CW_30_DEG": 21,
+            "REMOTE_ROTATE_CCW_30_DEG":22,
             "REMOTE_TURN_ON_CART": 91,
             "REMOTE_TURN_OFF_CART": 92,
             "REMOTE_ACTIVATION": 99
@@ -343,7 +347,7 @@
                 "ROTATION_DIR": 1,
                 "ROTATION_MARGIN": 10.0,
                 "ROTATION_ANGLE_ON_MARKER": [30.0],
-                "ROTATION_ANGULAR_VELOCITY": 20.0,
+                "ROTATION_ANGULAR_VELOCITY": 10.0,
                 "LINEAR_VELOCITY_CALC_COEFF": 1.2,
                 "ANGULAR_VELOCITY_CALC_COEFF": 1.5,
                 "DRIVE_SCENARIO": 4,
@@ -360,9 +364,9 @@
             "DESCRIPTION": "",
             "LIST": [],
             "VALUE": {
-                "CAP_RATE": 200,
-                "LINE_DETECTION_RATE": 10,
-                "MARKER_DETECTION_RATE": 10,
+                "CAP_RATE": 500,
+                "LINE_DETECTION_RATE": 20,
+                "MARKER_DETECTION_RATE": 20,
                 "MANAGEMENT_RATE": 20,
                 "SRC_HEIGHT": 720,
                 "SRC_WIDTH": 1280,
@@ -378,7 +382,7 @@
                 "PSWD": "1q2w3e4r",
                 "ADDR": "192.168.2.110",
                 "PORT": 554,
-                "FRAME_SKIP": 25,
+                "FRAME_SKIP": 5,
                 "MODEL": "DH-IPC-HDBW1431E",
                 "INIT_TIMEOUT": 120.0,
                 "CAP_THREAD_TIMEOUT": 0.4,
@@ -488,6 +492,7 @@
                 "PORT": 554,
                 "CAMERA_THREAD_TIMEOUT": 0.5,
                 "INIT_TIMEOUT": 10.0,
+                "SQL_THREAD_TIMEOUT": 10.0,
                 "LEFT_CAM_SRC_WIDTH": 1920,
                 "LEFT_CAM_SRC_HEIGHT": 720,
                 "RIGHT_CAM_SRC_WIDTH": 1920,
