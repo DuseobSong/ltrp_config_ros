@@ -499,7 +499,12 @@
                 "RIGHT_CAM_SRC_HEIGHT": 720,
                 "RESIZED_WIDTH": 1920,
                 "RESIZED_HEIGHT": 720,
-                "IMAGE_NOT_AVAILABLE_THRESH": 10
+                "IMAGE_NOT_AVAILABLE_THRESH": 10,
+                "DB_USER": "ltrp_01",
+                "DB_PSWD": "1q2w3e4r",
+                "DB_HOST": "localhost",
+                "DB_NAME": "image_db",
+                "DB_TABLE_NAME": "raw_images"
             }
         }
     },
