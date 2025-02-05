@@ -494,16 +494,17 @@
                 "INIT_TIMEOUT": 10.0,
                 "SQL_THREAD_TIMEOUT": 10.0,
                 "LEFT_CAM_SRC_WIDTH": 1920,
-                "LEFT_CAM_SRC_HEIGHT": 720,
+                "LEFT_CAM_SRC_HEIGHT": 1080,
                 "RIGHT_CAM_SRC_WIDTH": 1920,
-                "RIGHT_CAM_SRC_HEIGHT": 720,
+                "RIGHT_CAM_SRC_HEIGHT": 1080,
                 "RESIZED_WIDTH": 1920,
-                "RESIZED_HEIGHT": 720,
-                "IMAGE_NOT_AVAILABLE_THRESH": 10,
-                "DB_USER": "ltrp_01",
+                "RESIZED_HEIGHT": 1080,
+                "IMAGE_NOT_AVAILABLE_CNT_THRESH": 10,
+                "DB_USER": "ltrp_local",
                 "DB_PSWD": "1q2w3e4r",
                 "DB_HOST": "localhost",
                 "DB_NAME": "image_db",
+                "DB_PORT": 33061,
                 "DB_TABLE_NAME": "raw_images"
             }
         }

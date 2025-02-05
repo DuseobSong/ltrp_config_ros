@@ -13,12 +13,40 @@ mysql> FLUSH PRIVILEGES;
 [CHANGE WORKING DATABASE]
 mysql> use {DATABASE_NAME};
 
-[GET ALL uSER INFO]
+[GET ALL USER INFO]
 mysql> select Host,User,plugin,authentication_string from mysql.user;
 
 [CREATE USER]
 mysql> CREATE USER '{USER_NAME}'@'%' identified by '{PASSWORD}'; # external access
-mysql> CREATE uSER '{USER_NAME}'@'localhost' identified by '{PASSWORD}'; # internal access
+mysql> CREATE USER '{USER_NAME}'@'localhost' identified by '{PASSWORD}'; # internal access
+
+[ALLOW EXTERNAL ACCESS]
+$ sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf
+
+[mysqld]
+user = mysql
+pid_file            = /var/run/mysqld/mysqld.pid
+socket              = /var/run/mysqld/mysqld.sock
+port                = 3306
+datadir             = /var/lib/mysql
+
+bind-address        = 0.0.0.0
+mysqlx-bind-address = 0.0.0.0
+...
+
+$ sudo ufw allow out 3306/tcp
+$ sudo ufw allow in 3306/tcp
+$ sudo systemctl reatart mysql
+
+[EXTERNAL ACCESS]
+$ mysql -u {USER_NAME} -h {HOST_ADDRESS} -P {PORT} -p
+
+
+[PORT]
+$ sudo netstat -ntlp
+
+[GRANT PRIVILEGES]
+mysql> GRANT SELECT, UPDATE, INSERT on {DATABASE_NAME}.* to '{USER_NAME}'@'{ADDRESS}'
 
 [CREATE DATABASE]
 mysql> CREATE DATABASE {DATABASE_NAME} DEFAULT CHARACTER SET UTF8;
@@ -33,7 +61,10 @@ mysql> CREATE TABLE {TABLE_NAME} (
     cam_dir VARCHAR(1) NOT NULL,
     width INT UNSIGNED NOT NULL,
     height INT UNSIGNED NOT NULL,
-    img_str MEDIUMBLOB NOT NULL
+    img_str MEDIUMBLOB NOT NULL,
+    img_str_length INT NOT NULL,
+    latitude INT,
+    longitude INT
 );
 
 [TABLE SUMMARY]

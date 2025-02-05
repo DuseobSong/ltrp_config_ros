@@ -4,6 +4,7 @@ project(ltrp_config_ros)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
+  std_msgs
   message_generation
 )
 
@@ -19,14 +20,15 @@ add_message_files(
   Feedback.msg
   Illumination.msg
   ImageProcessingComputingTime.msg
-  ImageUploadResult.msg
   LineDetectionComputingTime.msg
-  Obstacle.msg
-  Overseer.msg
+  LprCaptureRequest.msg
+  LprCaptureResult.msg
   Marker.msg
   MarkerDetection.msg
   NodeReady.msg
   NodeRespawnResult.msg
+  Obstacle.msg
+  Overseer.msg
   RangeData.msg
   Rotation.msg
   RTK.msg
@@ -47,7 +49,7 @@ generate_messages(
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES ltrp_config_ros
- CATKIN_DEPENDS roscpp rospy
+ CATKIN_DEPENDS roscpp rospy std_msgs
 #  DEPENDS system_lib
 )
 

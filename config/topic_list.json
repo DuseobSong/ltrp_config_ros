@@ -17,7 +17,7 @@
         "TYPE": "std_msgs.msg.Bool"
     },
     "camera_direction_topic": {
-        "NAME": "/camera_direction",
+        "NAME": "/lpr/camera_direction",
         "TYPE": "std_msgs.msg.UInt8"
     },
     "camera_monitoring_topic": {
@@ -85,7 +85,7 @@
         "TYPE": "std_msgs.msg.Bool"
     },
     "left_camera_topic": {
-        "NAME": "/left_camera",
+        "NAME": "/lpr/left_camera",
         "TYPE": "sensor_msgs.msg.Image"
     },
     "lidar_main_topic": {
@@ -109,16 +109,16 @@
         "TYPE": "sensor_msgs.msg.Image"
     },
     "lp_capture_image_topic": {
-        "NAME": "/lp_image",
+        "NAME": "/lpr/image",
         "TYPE": "sensor_msgs.msg.Image"
     },
     "lp_capture_topic": {
-        "NAME": "/lp_capture",
-        "TYPE": "std_msgs.msg.Bool"
+        "NAME": "/lpr/capture",
+        "TYPE": "ltrp_config_ros.msg.LprCaptureRequest"
     },
     "lp_capture_result_topic": {
-        "NAME": "/lp_capture_result",
-        "TYPE": "std_msgs.msg.UInt8MultiArray"
+        "NAME": "/lpr/capture_result",
+        "TYPE": "ltrp_config_ros.msg.LprCaptureResult"
     },
     "marker_detection_topic": {
         "NAME": "/marker_detection",
@@ -181,7 +181,7 @@
         "TYPE": "std_msgs.msg.UInt8"
     },
     "right_camera_topic": {
-        "NAME": "/lp_right_camera",
+        "NAME": "/lpr/right_camera",
         "TYPE": "sensor_msgs.msg.Image"
     },
     "rotation_start_topic": {
@@ -190,10 +190,6 @@
     },
     "rotation_state_topic": {
         "NAME": "/rotation_state",
-        "TYPE": "std_msgs.msg.UInt8"
-    },    
-    "switch_camera_topic": {
-        "NAME": "/switch_camera",
         "TYPE": "std_msgs.msg.UInt8"
     },
     "system_activate_topic": {
@@ -220,8 +216,8 @@
         "NAME": "/terminate",
         "TYPE": "std_msgs.msg.empty"
     },
-    "toggle_camera_direction_topic": {
-        "NAME": "/toggle_camera_direction",
+    "toggle_camera_topic": {
+        "NAME": "/lpr/toggle_camera",
         "TYPE": "std_msgs.msg.UInt8"
     },
     "ultrasonic_topic": {

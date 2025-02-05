@@ -1,0 +1,2 @@
+uint64 seq_no
+uint8 CameraDirection

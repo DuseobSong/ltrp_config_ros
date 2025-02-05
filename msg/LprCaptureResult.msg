@@ -1,10 +1,14 @@
+uint64 seq_no
+bool[] CaptureResult
 uint64 LeftDetectionCount
 uint64 LeftCaptureCount
-uint8 LeftCaprureResult
+uint64 LeftCaptureResult
 uint64 LeftImageUploadCount
-uint8 LeftImageUploadResult
+uint64 LeftImageUploadResult
+uint64 LeftImageNotAvailable
 uint64 RightDetectionCount
 uint64 RightCaptureCount
-uint8 RightCaptureResult
+uint64 RightCaptureResult
 uint64 RightImageUploadCount
 uint64 RightImageUploadResult
+uint64 RightImageNotAvailable
