@@ -40,9 +40,9 @@ $ sudo systemctl reatart mysql
 
 [EXTERNAL ACCESS]
 $ mysql -u {USER_NAME} -h {HOST_ADDRESS} -P {PORT} -p
+<NOTE> MYSQL port : 33061
 
-
-[PORT]
+[KERNEL PORT STATUS]
 $ sudo netstat -ntlp
 
 [GRANT PRIVILEGES]

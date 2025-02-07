@@ -218,7 +218,7 @@
     },
     "toggle_camera_topic": {
         "NAME": "/lpr/toggle_camera",
-        "TYPE": "std_msgs.msg.UInt8"
+        "TYPE": "std_msgs.msg.Bool"
     },
     "ultrasonic_topic": {
         "NAME": "/ultrasonic",

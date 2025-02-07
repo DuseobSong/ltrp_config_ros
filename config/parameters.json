@@ -120,7 +120,8 @@
             "DOWN": 5,
             "FORWARD": 6,
             "BACKWARD": 7,
-            "CENTER": 9
+            "CENTER": 9,
+            "LEFT_AND_RIGHT": 12
         }
     },
     "DRIVE_SCENARIO_CATEGORY": {
