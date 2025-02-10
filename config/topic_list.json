@@ -16,6 +16,10 @@
         "NAME": "/button_trigger",
         "TYPE": "std_msgs.msg.Bool"
     },
+    "broadcast_topic": {
+        "NAME": "/broadcast",
+        "TYPE": "ltrp_config_ros/msg/Broadcast"
+    },
     "camera_direction_topic": {
         "NAME": "/lpr/camera_direction",
         "TYPE": "std_msgs.msg.UInt8"

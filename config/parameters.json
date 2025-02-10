@@ -4,9 +4,9 @@
     },
     "NODE_CODE": {
         "DESCRIPTION": "",
-        "LIST": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 99],
-        "NAME": ["OVERSEER", "MAINBOARD_SERIAL", "DRIVE_CONTROL", "LINE_DETECT", "CWS", "CWS_LOWER", "RANGE_SENSOR", "BH1750", "ULTRASONIC", "EXTERNAL_BUTTON", "RPLIDAR_C1", "LPR", "REMOTE"],
-        "ACTIVATION": [1, 2, 3, 4, 5, 6, 9, 10, 11],
+        "LIST": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 99],
+        "NAME": ["OVERSEER", "MAINBOARD_SERIAL", "DRIVE_CONTROL", "LINE_DETECT", "CWS", "CWS_LOWER", "RANGE_SENSOR", "BH1750", "ULTRASONIC", "EXTERNAL_BUTTON", "RPLIDAR_C1", "LPR", "BROADCAST", "REMOTE"],
+        "ACTIVATION": [1, 2, 3, 4, 5, 6, 9, 10, 11, 12],
         "VALUE": {
             "OVERSEER": 0,
             "MAINBOARD_SERIAL": 1,
@@ -20,6 +20,7 @@
             "EXTERNAL_BUTTON": 9,
             "RPLIDAR_C1": 10,
             "LPR": 11,
+            "BROADCAST": 12,
             "REMOTE": 99
         },
         "ROOT_PKG": {
@@ -33,7 +34,9 @@
             "BH1750": "bh1750_ros",
             "ULTRA_SONIC": "cws_ros",
             "EXTERNAL_BUTTON": "ltrp_ros",
-            "RPLIDAR_C1": "rplidar_ros"
+            "RPLIDAR_C1": "rplidar_ros",
+            "LPR": "ltrp_ros",
+            "BROADCAST": "ltrp_broadcast_ros"
         },
         "EXECUTABLE": {
             "OVERSEER": "overseer.py",
@@ -46,7 +49,9 @@
             "BH1750": "bh1750_prototype.py",
             "ULTRA_SONIC": "cws_ultrasonic_prototype.py",
             "EXTERNAL_BUTTON": "external_button_prototype.py",
-            "RPLIDAR_C1": "rplidarNode"
+            "RPLIDAR_C1": "rplidarNode",
+            "LPR": "lpr_prototype.py",
+            "BROADCAST": "broadcast_prototype.py"
         },
         "ARGS": {
             "OVERSEER": "",
@@ -59,7 +64,9 @@
             "BH1750": "_root_pkg:=ltrp_config_ros _debug:=",
             "ULTRA_SONIC": "_root_pkg:=ltrp_config_ros _debug:=",
             "EXTERNAL_BUTTON": "_root_pkg:=ltrp_config_ros _debug:=",
-            "RPLIDAR_C1": "_serial_port:=/dev/rplidar_c1 _serial_baudrate:=460800 _frame_id:=rplidar_c1 _inverted:=false _angle_compensate:=true _scan_frequency:=10.0 _scan_mode:=Standard"
+            "RPLIDAR_C1": "_serial_port:=/dev/rplidar_c1 _serial_baudrate:=460800 _frame_id:=rplidar_c1 _inverted:=false _angle_compensate:=true _scan_frequency:=10.0 _scan_mode:=Standard",
+            "LPR": "",
+            "BROADCAST": ""
         }
     },
     "CART_MODE_COMMAND": {
@@ -241,7 +248,7 @@
     },
     "REMOTE_CONTROL_COMMAND": {
         "DESCRIPTION": "",
-        "LIST": [1, 2, 3, 4, 9, 11, 12, 13, 14, 21, 22, 91, 92, 99],
+        "LIST": [1, 2, 3, 4, 9, 11, 12, 13, 14, 21, 22, 81, 89, 91, 92, 99],
         "VALUE": {
             "REMOTE_ACCELERATE": 1,
             "REMOTE_DECELERATE": 2,
@@ -254,9 +261,36 @@
             "REMOTE_MODE_CHANGE_FOLLOW": 14,
             "REMOTE_ROTATE_CW_30_DEG": 21,
             "REMOTE_ROTATE_CCW_30_DEG":22,
+            "REMOTE_PLAY_TEST_SOUND": 81,
+            "REMOTE_STOP_PLAYING_SOUND": 89,
             "REMOTE_TURN_ON_CART": 91,
             "REMOTE_TURN_OFF_CART": 92,
             "REMOTE_ACTIVATION": 99
+        }
+    },
+    "BROADCAST_SOUND_LIST": {
+        "DESCRIPTION": "",
+        "LIST": [1, 2, 3, 4, 5, 6, 99],
+        "VALUE": {
+            "INFO_MSG": 1,
+            "WARNING_MSG": 2,
+            "INITIALIZATION_MSG": 3,
+            "TASK_START_MSG": 4,
+            "TASK_STOP_MSG": 5,
+            "SHUT_DOWN_MSG": 6,
+            "ALARM_SOUND": 21,
+            "CANCLE_BROADCASTING": 91,
+            "TEST_SOUND": 99
+        },
+        "FILE_NAME": {
+            "1": "info.mp3",
+            "2": "warning.mp3",
+            "3": "initialization.mp3",
+            "4": "task_start.mp3",
+            "5": "task_stop.mp3",
+            "6": "shut_down.mp3",
+            "21": "alarm.mp3",
+            "99": "test_sound.mp3"
         }
     },
     "DEFAULT_VALUES": {
@@ -507,6 +541,13 @@
                 "DB_NAME": "image_db",
                 "DB_PORT": 33061,
                 "DB_TABLE_NAME": "raw_images"
+            }
+        },
+        "BROADCAST": {
+            "DECRIPTION": "",
+            "LIST": [],
+            "VALUE": {
+                
             }
         }
     },

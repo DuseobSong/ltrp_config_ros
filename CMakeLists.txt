@@ -12,6 +12,7 @@ find_package(catkin REQUIRED COMPONENTS
 add_message_files(
   FILES
   ButtonState.msg
+  Broadcast.msg
   Center.msg
   ComputingTime.msg
   Contour.msg
