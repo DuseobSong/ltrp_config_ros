@@ -199,7 +199,7 @@
                 "SHAPE": "LINE",
                 "BGR_MIN": [0, 0, 0],
                 "BGR_MAX": [255, 255, 255],
-                "HSV_MIN": [20, 0, 150],
+                "HSV_MIN": [20, 150, 150],
                 "HSV_MAX": [60, 255, 255],
                 "YCRCB_MIN": [0, 0, 0],
                 "YCRCB_MAX": [255, 255, 100]
@@ -209,11 +209,11 @@
                 "SIZE": 40,
                 "SHAPE": "CIRCLE",
                 "BGR_MIN": [0, 0, 0],
-                "BGR_MAX": [1, 1, 1],
-                "HSV_MIN": [0, 0, 0],
-                "HSV_MAX": [1, 1, 1],
-                "YCRCB_MIN": [0, 0, 0],
-                "YCRCB_MAX": [1, 1, 1]
+                "BGR_MAX": [255, 255, 255],
+                "HSV_MIN": [168, 85, 173],
+                "HSV_MAX": [190, 255, 255],
+                "YCRCB_MIN": [106, 172, 172],
+                "YCRCB_MAX": [174, 199, 114]
             },
             "ACTION": {
                 "CODE": 3,
