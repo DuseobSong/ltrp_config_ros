@@ -186,8 +186,7 @@
                 "CODE": 0,
                 "SIZE": 0,
                 "SHAPE": "NONE",
-                "BGR_MIN": [0, 0, 0],
-                "BGR_MAX": [0, 0, 0],
+                "COLOR": "NONE",
                 "HSV_MIN": [0, 0, 0],
                 "HSV_MAX": [0, 0, 0],
                 "YCRCB_MIN": [0, 0, 0],
@@ -197,34 +196,33 @@
                 "CODE": 1,
                 "SIZE": 40,
                 "SHAPE": "LINE",
-                "BGR_MIN": [0, 0, 0],
-                "BGR_MAX": [255, 255, 255],
-                "HSV_MIN": [20, 150, 150],
-                "HSV_MAX": [60, 255, 255],
-                "YCRCB_MIN": [0, 0, 0],
-                "YCRCB_MAX": [255, 255, 100]
+                "COLOR": "Y",
+                "HSV_MIN": [  9, 123, 178],
+                "HSV_MAX": [ 36, 184, 255],
+                "YCRCB_MIN": [158, 129,   0],
+                "YCRCB_MAX": [241, 250,  84]
             },
             "END_POINT": {
                 "CODE": 2,
                 "SIZE": 40,
                 "SHAPE": "CIRCLE",
+                "COLOR": "R",
                 "BGR_MIN": [0, 0, 0],
                 "BGR_MAX": [255, 255, 255],
                 "HSV_MIN": [168, 85, 173],
                 "HSV_MAX": [190, 255, 255],
-                "YCRCB_MIN": [106, 172, 172],
+                "YCRCB_MIN": [106, 172, 100],
                 "YCRCB_MAX": [174, 199, 114]
             },
             "ACTION": {
                 "CODE": 3,
                 "SIZE": 40,
                 "SHAPE": "RECTANGLE",
-                "BGR_MIN": [0, 0, 0],
-                "BGR_MAX": [1, 1, 1],
-                "HSV_MIN": [0, 0, 0],
-                "HSV_MAX": [1, 1, 1],
-                "YCRCB_MIN": [0, 0, 0],
-                "YCRCB_MAX": [1, 1, 1]
+                "COLOR": "B",
+                "HSV_MIN": [ 94,  85, 159],
+                "HSV_MAX": [122, 255, 255],
+                "YCRCB_MIN": [ 88,  94, 145],
+                "YCRCB_MAX": [152, 120, 255]
             }
         }
     },
@@ -412,6 +410,8 @@
                 "UPPER_ROI_WIDTH": 200,
                 "LOWER_ROI_WIDTH": 320,
                 "CONTOUR_AREA_THRESHOLD": 150,
+                "ENABLE_ARUCO_DETECTOR": 1,
+                "ARUCO_DICT_TYPE": 1,
                 "LATERAL_OFFSET": 0.0,
                 "USER": "irova",
                 "PSWD": "1q2w3e4r",
@@ -640,6 +640,24 @@
             "WARNING_BYTE": 87,
             "END_BYTE_1": 13,
             "END_BYTE_2": 10
+        }
+    },
+    "ARUCO_MARKER_DESCRIPTION": {
+        "DESCRIPTION": "",
+        "LIST": [],
+        "VALUE": {
+            "PAUSE_CCW_10": 11,
+            "PAUSE_CCW_30": 12,
+            "PAUSE_CCW_45": 13,
+            "PAUSE_CCW_60": 14,
+            "PAUSE_CCW_80": 15,
+            "PAUSE_CW_10": 21,
+            "PAUSE_CW_30": 22,
+            "PAUSE_CW_45": 23,
+            "PAUSE_CW_60": 24,
+            "PAUSE_CW_80": 25,
+            "END_POINT_CCW": 91,
+            "END_POINT_CW": 92
         }
     }
 }
