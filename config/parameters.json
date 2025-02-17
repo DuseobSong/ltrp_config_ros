@@ -246,7 +246,7 @@
     },
     "REMOTE_CONTROL_COMMAND": {
         "DESCRIPTION": "",
-        "LIST": [1, 2, 3, 4, 9, 11, 12, 13, 14, 21, 22, 81, 89, 91, 92, 99],
+        "LIST": [1, 2, 3, 4, 9, 11, 12, 13, 14, 21, 22, 71, 81, 89, 91, 92, 99],
         "VALUE": {
             "REMOTE_ACCELERATE": 1,
             "REMOTE_DECELERATE": 2,
@@ -259,6 +259,7 @@
             "REMOTE_MODE_CHANGE_FOLLOW": 14,
             "REMOTE_ROTATE_CW_30_DEG": 21,
             "REMOTE_ROTATE_CCW_30_DEG":22,
+            "REMOTE_ARUCO_DETECTOR_ENABLE":71,
             "REMOTE_PLAY_TEST_SOUND": 81,
             "REMOTE_STOP_PLAYING_SOUND": 89,
             "REMOTE_TURN_ON_CART": 91,
@@ -305,11 +306,12 @@
                 "DEFAULT_ERR_CODE": 0,
                 "DEFAULT_CON_MODE": 0,
                 "DEFAULT_ROTATION_FLAG": 1,
-                "ENCODER_ODOMETRY": 0,
+                "ENCODER_ODOMETRY": 3,
                 "NODE_STATE_ONLINE": 1,
                 "NODE_STATE_OFFLINE": 2,
                 "NODE_STATE_ERROR": 9,
-                "RANGE_SENSOR_AVAILABLE": 1
+                "RANGE_SENSOR_AVAILABLE": 1,
+                "ENABLE_ARUCO_DETECTOR": 1
             }
         },
         "OVERSEER": {
@@ -410,7 +412,6 @@
                 "UPPER_ROI_WIDTH": 200,
                 "LOWER_ROI_WIDTH": 320,
                 "CONTOUR_AREA_THRESHOLD": 150,
-                "ENABLE_ARUCO_DETECTOR": 1,
                 "ARUCO_DICT_TYPE": 1,
                 "LATERAL_OFFSET": 0.0,
                 "USER": "irova",
@@ -644,7 +645,8 @@
     },
     "ARUCO_MARKER_DESCRIPTION": {
         "DESCRIPTION": "",
-        "LIST": [],
+        "ACTION_MARKER_LIST": [11, 12, 13, 14, 15, 21, 22, 23, 24, 25],
+        "END_POINT_MARKER_LIST": [41],
         "VALUE": {
             "PAUSE_CCW_10": 11,
             "PAUSE_CCW_30": 12,
@@ -656,8 +658,8 @@
             "PAUSE_CW_45": 23,
             "PAUSE_CW_60": 24,
             "PAUSE_CW_80": 25,
-            "END_POINT_CCW": 91,
-            "END_POINT_CW": 92
+            "END_POINT_CW": 41,
+            "END_POINT_CCW": 42
         }
     }
 }
