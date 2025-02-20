@@ -44,6 +44,10 @@
         "NAME": "/computing_time",
         "TYPE": "ltrp_config_ros/ComputingTime"
     },
+    "cws_area_visualization_topic": {
+        "NAME": "/cws/area",
+        "TYPE": "visualization_msgs.msg.Marker"
+    },
     "detection_result_topic": {
         "NAME": "/detection",
         "TYPE": "ltrp_config_ros.msg.Detection"
@@ -93,19 +97,23 @@
         "TYPE": "sensor_msgs.msg.Image"
     },
     "lidar_main_topic": {
-        "NAME": "/lidar_main",
+        "NAME": "/lidar/main",
         "TYPE": "std_msgs.msg.Float64MultiArray"
     },    
-    "lidar_pointcloud_topic": {
-        "NAME": "/lidar_pointcloud",
+    "lidar_main_detection_topic": {
+        "NAME": "/lidar/main/detection",
         "TYPE": "sensor_msgs.msg.PointCloud"
     },
     "lidar_sub_topic": {
-        "NAME": "/lidar_sub",
+        "NAME": "/lidar/sub",
         "TYPE": "sensor_msgs.msg.LaserScan"
     },
     "lidar_sub_filter_topic": {
-        "NAME": "/lidar_sub/filter",
+        "NAME": "/lidar/sub/filter",
+        "TYPE": "sensor_msgs.msg.LaserScan"
+    },
+    "lidar_sub_detection_topic": {
+        "NAME": "/lidar/sub/detection",
         "TYPE": "sensor_msgs.msg.LaserScan"
     },
     "line_mask_topic": {

@@ -4,8 +4,8 @@
     },
     "NODE_CODE": {
         "DESCRIPTION": "",
-        "LIST": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 99],
-        "NAME": ["OVERSEER", "MAINBOARD_SERIAL", "DRIVE_CONTROL", "LINE_DETECT", "CWS", "CWS_LOWER", "RANGE_SENSOR", "BH1750", "ULTRASONIC", "EXTERNAL_BUTTON", "RPLIDAR_C1", "LPR", "BROADCAST", "REMOTE"],
+        "LIST": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 98, 99],
+        "NAME": ["OVERSEER", "MAINBOARD_SERIAL", "DRIVE_CONTROL", "LINE_DETECT", "CWS", "CWS_LOWER", "RANGE_SENSOR", "BH1750", "ULTRASONIC", "EXTERNAL_BUTTON", "RPLIDAR_C1", "LPR", "BROADCAST", "CWS_AREA", "REMOTE"],
         "ACTIVATION": [1, 2, 3, 4, 5, 6, 9, 10, 11, 12],
         "VALUE": {
             "OVERSEER": 0,
@@ -21,6 +21,7 @@
             "RPLIDAR_C1": 10,
             "LPR": 11,
             "BROADCAST": 12,
+            "CWS_AREA": 98,
             "REMOTE": 99
         },
         "ROOT_PKG": {
@@ -412,7 +413,7 @@
                 "UPPER_ROI_WIDTH": 200,
                 "LOWER_ROI_WIDTH": 320,
                 "CONTOUR_AREA_THRESHOLD": 150,
-                "ARUCO_DICT_TYPE": 1,
+                "ARUCO_DICT_TYPE": "DICT_4X4_50",
                 "LATERAL_OFFSET": 0.0,
                 "USER": "irova",
                 "PSWD": "1q2w3e4r",
@@ -424,7 +425,8 @@
                 "CAP_THREAD_TIMEOUT": 0.4,
                 "GUIDE_LINE_DET_THREAD_TIMEOUT": 0.5,
                 "MARKER_DET_THREAD_TIMEOUT": 0.5,
-                "IMAGE_NOT_AVAILABLE_THRESH": 500 
+                "IMAGE_NOT_AVAILABLE_THRESH": 500,
+                "BINARY_THRESH": [150, 255]
             }
         },
         "MAINBOARD_SERIAL": {
@@ -448,6 +450,8 @@
                 "SAFETY_STOP_DISTANCE": 0.7,
                 "STOP_DISTANCE": 0.5,
                 "LIDAR_BUFFER_SIZE": 180,
+                "CWS_WARNING_AREA": [0.0, 1.20, -0.40, 0.40],
+                "CWS_STOP_AREA": [0.0, 0.70, -0.40, 0.40],
                 "DETECTION_ANGLE_LOWER_LIMIT": 30,
                 "DETECTION_ANGLE_UPPER_LIMIT": 50,
                 "STATIC_OBSTACLE_WAIT_TIME": 5.0,
@@ -459,9 +463,10 @@
             "LIST": [],
             "VALUE": {
                 "TILT_ANGLE": -45.0,
-                "INSTALLATION_HEIGHT": 1.05,
-                "CWS_CUBE_DIM": [-1.20, 0.0, -0.40, 0.40, 0.05, 1.20],
-                "OBSTACLE_THRESHOLD": 5,
+                "INSTALLATION_HEIGHT": 0.75,
+                "CWS_WARNING_CUBE": [0.0, 1.20, -0.40, 0.40, 0.05, 0.75],
+                "CWS_STOP_CUBE": [0.0, 0.90, -0.40, 0.40, 0.05, 0.75],
+                "OBSTACLE_THRESHOLD": 3,
                 "STATIC_OBSTACLE_WAIT_TIME": 5.0,
                 "RESUME_WAIT_TIME": 3.0
             }
@@ -660,6 +665,15 @@
             "PAUSE_CW_80": 25,
             "END_POINT_CW": 41,
             "END_POINT_CCW": 42
+        }
+    },
+    "CWS_WARNING_STATE": {
+        "DESCRIPTION": "",
+        "LIST": [1, 3, 7],
+        "VALUE": {
+            "SAFE": 1,
+            "WARNING": 3,
+            "STOP": 7
         }
     }
 }
