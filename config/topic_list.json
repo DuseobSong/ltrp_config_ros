@@ -1,7 +1,11 @@
 {
     "prefix": "/ltrp",
-    "activate_range_sensor": {
+    "activate_range_sensor_topic": {
         "NAME": "/activate_range_sensor",
+        "TYPE": "std_msgs.msg.Bool"
+    },
+    "aruco_detector_enable_topic": {
+        "NAME": "/aruco_detector_enable",
         "TYPE": "std_msgs.msg.Bool"
     },
     "bh1750_illumination_topic": {

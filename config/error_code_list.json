@@ -1,5 +1,5 @@
 {
-    "MAX_ERR_CODE": 39,
+    "MAX_ERR_CODE": 43,
     "0": "No error",
     "1": "Malfunction",
     "2": "Failed to load error code list.",
@@ -40,6 +40,14 @@
     "37": "Left camera thread vital check failed.",
     "38": "Right camera thread vital check failed.",
     "39": "Image server not available.",
+    "40": "GNSS-RTK protocl loading failed",
+    "41": "GNSS-RTK module not working.",
+    "42": "NTRIP client not working",
+    "43": "NTRIP connection error",
+    "44": "NTRIP connection timeout",
+    "45": "NTRIP connection lost",
+    "46": "NTRIP connection instable",
+    "47": "NTRIP connection not found",
     "ERR_NO_ERROR": 0,
     "ERR_MAL_FUNCTION": 1,
     "ERR_ERROR_CODE_LOADING_FAILED": 2,
@@ -79,5 +87,13 @@
     "ERR_GUIDE_LINE_AND_MARKER_DETECTION_THREAD_VITAL_CHK_FAILED": 36,
     "ERR_LEFT_CAMERA_THREAD_VITAL_CHK_FAILED": 37,
     "ERR_RIGHT_CAMERA_THREAD_VITAL_CHK_FAILED": 38,
-    "ERR_IMG_SERVER_NOT_AVAILABLE": 39
+    "ERR_IMG_SERVER_NOT_AVAILABLE": 39,
+    "ERR_GNSS_RTK_PROTOCOL_LOADING_FAILED": 40,
+    "ERR_GNSS_RTK_MODULE_NOT_WORKING": 41,
+    "ERR_NTRIP_NOT_WORKING": 42,
+    "ERR_NTRIP_CONNECTION_ERROR": 43,
+    "ERR_NTRIP_CONNECTION_TIMEOUT": 44,
+    "ERR_NTRIP_CONNECTION_LOST": 45,
+    "ERR_NTRIP_CONNECTION_INSTABLE": 46,
+    "ERR_NO_NTRIP_CONNECTION": 47
 } 
