@@ -1,0 +1,191 @@
+{
+    "Broadcast": {
+        "NodeCode": "uint8",
+        "MsgCode": "uint8"
+    },
+    "ButtonState": {
+        "header": "Header",
+        "PWRButton": "bool",
+        "AButton": "bool",
+        "BButton": "bool"
+    },
+    "ComputingTime": {
+        "LoopTime": "float64",
+        "ImageProcessing": "ImageProcessingComputingTime",
+        "LineDetection": "LineDetectionComputingTime"
+    },
+    "Contour": {
+        "Contour": "Point[]"
+    },
+    "Detection": {
+        "subROI1": "SubROIDetection",
+        "subROI2": "SubROIDetection",
+        "subROI3": "SubROIDetection",
+        "subROI4": "SubROIDetection",
+        "subROI5": "SubROIDetection",
+        "subROI6": "SubROIDetection"
+    },
+    "Error": {
+        "NodeCode": "uint8",
+        "ErrorCode": "uint8",
+        "Description": "string"
+    },
+    "Feedback": {
+        "SystemMonitoring": "uint8[]",
+        "VLinear": "float64",
+        "Distance": "float64",
+        "Heading": "float64",
+        "GyroZ": "float64",
+        "PosX": "float64",
+        "PosY": "float64",
+        "Lidar": "float64[]",
+        "Mode": "uint8"
+    },
+    "Illumination": {
+        "header": "Header",
+        "Illumination": "uint32"
+    },
+    "ImageProcessingComputingTime": {
+        "Total": "float64",
+        "CaptureCount": "float64",
+        "CaptureTime": "float64",
+        "ResizeTime": "float64",
+        "UndistortionTime": "float64",
+        "ThresholdingTime": "float64"
+    },
+    "LineDetectionComputingTime": {
+        "Total": "float64",
+        "LineDetectionCnt": "float64",
+        "LineDetectionTime": "float64",
+        "EndPointDetectionCnt": "float64",
+        "EndPointDetectionTime": "float64",
+        "ActionMarkerDetectionCnt": "float64",
+        "ActionMarkerDetectionTime": "float64"
+    },
+    "LprCaptureRequest": {
+        "seq_no": "uint64",
+        "CameraDirection": "uint8"
+    },
+    "LprCaptureResult": {
+        "seq_no": "uint64",
+        "CaptureResult": "bool[]",
+        "LeftDetectionCount": "uint64",
+        "LeftCaptureCount": "uint64",
+        "LEftImageUploadCount": "uint64",
+        "LeftImageUploadResult": "uint64",
+        "LeftImageNotAvailable":"uint64",
+        "RightDetectionCount": "uint64",
+        "RightCaptureCount": "uint64",
+        "RightCaptureResult": "uint64",
+        "RightImageUploadCount": "uint64",
+        "RightImageUploadResult": "uint64",
+        "RigntImageNotAvailable": "uint64"
+    },
+    "Marker": {
+        "MarkerType": "int8",
+        "detected": "bool",
+        "cX": "float64",
+        "cY": "float64",
+        "real_cX": "float64",
+        "real_cY": "float64"
+    },
+    "MarkerDetection": {
+        "header": "Header",
+        "EndPoint": "Marker",
+        "Action": "Marker",
+        "Aruco": "Marker"
+    },
+    "NodeReady": {
+        "header": "Header",
+        "NodeCode": "uint8",
+        "Ready": "bool"
+    },
+    "NodeRespawnResult": {
+        "header": "Header",
+        "NodeCode": "uint8",
+        "Result": "uint8"
+    },
+    "Obstacle": {
+        "NodeCode": "uint8",
+        "ObstacleDetected": "bool",
+        "EmergencyStop": "bool"
+    },
+    "Overseer": {
+        "header": "Header",
+        "ErrorCode": "uint8",
+        "SystemReset": "bool"
+    },
+    "Point": {
+        "x": "float64",
+        "y": "float64"
+    },
+    "RangeData": {
+        "header": "Header",
+        "distance": "float32",
+        "strength": "int32",
+        "temperature": "float32"
+    },
+    "Rotation": {
+        "RotationState": "uint8",
+        "RotationDirection": "uint8"
+    },
+    "RTK": {
+        "header": "Header",
+        "Longitude": "float64",
+        "Latitude": "float64",
+        "X": "float64",
+        "Y": "float64"
+    },
+    "SubROIDetection": {
+        "ROI_idx": "uint8",
+        "detected": "bool",
+        "contours": "Contour[]",
+        "centers": "Point[]",
+        "cX": "float64",
+        "cY": "float64",
+        "real_cX": "float64",
+        "real_cY": "flaot64"
+    },
+    "SystemActivate": {
+        "header": "Header",
+        "ActivateCode": "uint8"
+    },
+    "SystemResetResult": {
+        "header": "Header",
+        "result": "bool"
+    },
+    "SystemStatus": {
+        "header": "Header",
+        "Mode": "uint8",
+        "SystemMonitoring": "uint8[]",
+        "VLinear": "float64",
+        "Distance": "float64",
+        "Heading": "float64",
+        "GyroZ": "float64",
+        "X": "float64",
+        "Y": "float64", 
+        "CmdVelLin": "float64",
+        "CmdVelAng": "float64",
+        "ObstacleDetection": "bool",
+        "CWS": "bool",
+        "RemoteControl": "bool",
+        "ReceivedBytes": "uint64",
+        "ValidBytes": "uint64",
+        "TargetX": "float64",
+        "TargetY": "float64",
+        "ActiveSideCamera": "uint8",
+        "DeadThreadList": "uint8[]",
+        "ButtonPressed": "bool"
+    },
+    "Target": {
+        "MarkerType": "uint8",
+        "X": "float64",
+        "Y": "float64"
+    },
+    "Vital": {
+        "header": "Header",
+        "NodeCode": "uint8",
+        "State": "uint8",
+        "ErrorCode": "uint8"
+    }
+}
