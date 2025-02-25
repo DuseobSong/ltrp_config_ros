@@ -17,6 +17,7 @@ add_message_files(
   ComputingTime.msg
   Contour.msg
   Detection.msg
+  ErrorInfo.msg
   Error.msg
   Feedback.msg
   Illumination.msg

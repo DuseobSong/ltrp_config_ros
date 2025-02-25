@@ -1,0 +1,91 @@
+[INSTALL MYSQL-SERVER]
+$ sudo apt update
+$ sudo apt install mysql-server ufw
+$ sudo ufw allow mysql
+$ sudo systemctl start mysql
+$ sudo systemctl enable mysql
+
+[ROOT ACCOUNT SETTING]
+$ sudo mysql -u root
+mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY '{PASSWORD}';
+mysql> FLUSH PRIVILEGES;
+
+[CHANGE WORKING DATABASE]
+mysql> use {DATABASE_NAME};
+
+[GET ALL USER INFO]
+mysql> select Host,User,plugin,authentication_string from mysql.user;
+
+[CREATE USER]
+mysql> CREATE USER '{USER_NAME}'@'%' identified by '{PASSWORD}'; # external access
+mysql> CREATE USER '{USER_NAME}'@'localhost' identified by '{PASSWORD}'; # internal access
+
+[ALLOW EXTERNAL ACCESS]
+$ sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf
+
+[mysqld]
+user = mysql
+pid_file            = /var/run/mysqld/mysqld.pid
+socket              = /var/run/mysqld/mysqld.sock
+port                = 3306
+datadir             = /var/lib/mysql
+
+bind-address        = 0.0.0.0
+mysqlx-bind-address = 0.0.0.0
+...
+
+$ sudo ufw allow out 3306/tcp
+$ sudo ufw allow in 3306/tcp
+$ sudo systemctl reatart mysql
+
+[EXTERNAL ACCESS]
+$ mysql -u {USER_NAME} -h {HOST_ADDRESS} -P {PORT} -p
+<NOTE> MYSQL port : 33061
+
+[KERNEL PORT STATUS]
+$ sudo netstat -ntlp
+
+[GRANT PRIVILEGES]
+mysql> GRANT SELECT, UPDATE, INSERT on {DATABASE_NAME}.* to '{USER_NAME}'@'{ADDRESS}'
+
+[CREATE DATABASE]
+mysql> CREATE DATABASE {DATABASE_NAME} DEFAULT CHARACTER SET UTF8;
+
+[GET DATABASE LIST]
+mysql> SHOW databases;
+
+[CREATE TABLE] - Error log 
+mysql> CREATE TABLE {TABLE_NAME} (
+    _id INT PRIMARY KEY AUTO_INCREMENT,
+    datetime DATETIME NOT NULL,
+    ERROR_CODE INT NOT NULL,
+    NODE_CODE INT NOT NULL,
+    latitude FLOAT NOT NULL,
+    longitude FLOAT NOT NULL
+);
+
+[TABLE SUMMARY]
+mysql> describe {TABLE_NAME};
+
+[CREATE TABLE] - Error Description
+mysql> CREATE TABLE {TABLE_NAME} (
+    _code INT PRIMARY KEY NOT NULL,
+    description TINYTEXT NOT NULL
+)
+
+[CREATE SYSTEM LOG DATABASE]
+mysql> CREATE DATABASE system_log_db;
+
+[CREATE TABLE] SYSTEM LOG 
+mysql> create table system_log (
+    _id INT PRIMARY KEY AUTO_INCREMENT,
+    datetime DATETIME NOT NULL,
+    longitude FLOAT NOT NULL,
+    latotude FLOAT NOT NULL,
+    distance FLOAT NOT NULL,
+    mode INT NOT NULL,
+    v_lin FLOAT NOT NULL,
+    heading FLOAT NOT NULL,
+    obstacle_detection INT NOT NULL,
+    dead_thread_list TINYTEXT
+);

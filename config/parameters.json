@@ -4,8 +4,8 @@
     },
     "NODE_CODE": {
         "DESCRIPTION": "",
-        "LIST": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 98, 99],
-        "NAME": ["OVERSEER", "MAINBOARD_SERIAL", "DRIVE_CONTROL", "LINE_DETECT", "CWS", "CWS_LOWER", "RANGE_SENSOR", "BH1750", "ULTRASONIC", "EXTERNAL_BUTTON", "RPLIDAR_C1", "LPR", "BROADCAST", "GNSS_RTK", "CWS_AREA", "REMOTE"],
+        "LIST": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 81, 98, 99],
+        "NAME": ["OVERSEER", "MAINBOARD_SERIAL", "DRIVE_CONTROL", "LINE_DETECT", "CWS", "CWS_LOWER", "RANGE_SENSOR", "BH1750", "ULTRASONIC", "EXTERNAL_BUTTON", "RPLIDAR_C1", "LPR", "BROADCAST", "GNSS_RTK", "ERRPR_REPORT", "CWS_AREA", "REMOTE"],
         "ACTIVATION": [1, 2, 3, 4, 5, 6, 9, 10, 11, 12, 13],
         "VALUE": {
             "OVERSEER": 0,
@@ -22,6 +22,7 @@
             "LPR": 11,
             "BROADCAST": 12,
             "GNSS_RTK": 13,
+            "SYSTEM_INFO_REPORT": 81,
             "CWS_AREA": 98,
             "REMOTE": 99
         },
@@ -40,6 +41,7 @@
             "LPR": "ltrp_ros",
             "BROADCAST": "ltrp_broadcast_ros",
             "GNSS_RTK": "ltrp_ros",
+            "SYSTEM_INFO_REPORT": "ltrp_ros",
             "CWS_AREA": "cws_ros",
             "REMOTE": "ltrp_ros"
         },
@@ -58,6 +60,7 @@
             "LPR": "lpr_prototype.py",
             "BROADCAST": "broadcast_prototype.py",
             "GNSS_RTK": "gnss_rtk_prototype.py",
+            "SYSTEM_INFO_REPORT": "error_reporting_prototype.py",
             "CWS_AREA": "area_visualization.py",
             "REMOTE": "remote_control.py"
         },
@@ -76,6 +79,7 @@
             "LPR": "_root_pkg:=ltrp_config_ros _debug:=",
             "BROADCAST": "_root_pkg:=ltrp_config_ros _debug:=",
             "GNSS_RTK": "_root_pkg:=ltrp_config_ros _debug:=",
+            "SYSTEM_INFO_REPORT": "_root_pkg:=ltrp_config_ros _debug:=",
             "CWS_AREA": "_root_pkg:=ltrp_config_ros _debug:=",
             "REMOTE": "_root_pkg:=ltrp_config_ros"
         }
@@ -126,7 +130,7 @@
             "CAM_DIR_NONE": 0,
             "CAM_DIR_LEFT": 1,
             "CAM_DIR_RIGHT": 2,
-            "CAM_DIR_BOTH":3
+            "CAM_DIR_BOTH": 3
         }
     },
     "DIRECTION": {
@@ -422,7 +426,8 @@
                 "DETECTION_CNT_THRESHOLD": 10,
                 "RANGE_SENSOR_THRESHOLD": 4.0,
                 "N_ACTION_MARKER": 1,
-                "ROTATION_END_CHK_THRESHOLD": 200
+                "ROTATION_END_CHK_THRESHOLD": 200,
+                "PURE_LINE_TRACKING_PAUSE_TIME": 1.0
             }
         },
         "LINE_DETECT": {
@@ -615,6 +620,21 @@
                 "NORMAL_MSG_DATA_LENGTH": 150,
                 "RTCM_HEADER": "0xD3000000",
                 "RTCM_REQUEST_INTERVAL": 1.0
+            }
+        },
+        "SYSTEM_INFO_REPORT": {
+            "LIST": [],
+            "VALUE": {
+                "THREAD_HZ": 10,
+                "DB_USER": "ltrp_local",
+                "DB_PSWD": "1q2w3e4r",
+                "DB_HOST": "localhost",
+                "DB_NAME_ERR_LOG": "error_db",
+                "DB_NAME_SYS_LOG": "system_log_db",
+                "DB_PORT": 33061,
+                "DB_TABLE_NAME_ERR_LOG": "error_log",
+                "DB_TABLE_NAME_SYS_LOG": "system_log",
+                "DB_UPDATE_INTERVAL": 1.0
             }
         }
     },

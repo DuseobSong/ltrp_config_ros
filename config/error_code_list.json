@@ -1,5 +1,5 @@
 {
-    "MAX_ERR_CODE": 43,
+    "MAX_ERR_CODE": 48,
     "0": "No error",
     "1": "Malfunction",
     "2": "Failed to load error code list.",
@@ -48,6 +48,7 @@
     "45": "NTRIP connection lost",
     "46": "NTRIP connection instable",
     "47": "NTRIP connection not found",
+    "48": "Monitoring server not available",
     "ERR_NO_ERROR": 0,
     "ERR_MAL_FUNCTION": 1,
     "ERR_ERROR_CODE_LOADING_FAILED": 2,
@@ -95,5 +96,6 @@
     "ERR_NTRIP_CONNECTION_TIMEOUT": 44,
     "ERR_NTRIP_CONNECTION_LOST": 45,
     "ERR_NTRIP_CONNECTION_INSTABLE": 46,
-    "ERR_NO_NTRIP_CONNECTION": 47
+    "ERR_NO_NTRIP_CONNECTION": 47,
+    "ERR_MONITORING_SERVER DOWN": 48
 } 

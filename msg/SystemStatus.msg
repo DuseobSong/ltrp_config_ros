@@ -5,8 +5,8 @@ float64 VLinear
 float64 Distance
 float64 Heading
 float64 GyroZ
-float64 X
-float64 Y
+float64 Longitude
+float64 Latitude
 float64 CmdVelLin
 float64 CmdVelAng
 bool ObstacleDetection
