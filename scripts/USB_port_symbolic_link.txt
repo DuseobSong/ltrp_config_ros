@@ -1,0 +1,21 @@
+[CP2102 USB to UART Bridge Controller]
+[customize serial number]
+- use Simplicity Studio-Xpress Configurator
+
+
+[USB port symbolic link]
+- get serial number of usb device
+$ udevadm info -a /dev/ttyUSB{NUMBER} | grep '{serial}'
+
+- get product id
+$ udevadm info -a /dev/ttyUSB{NUMBER} | grep '{idProduct}'
+
+- get vendor id
+$ udevadm info -a /dev/ttyUSB{NUMBER} | grep '{idVendor}'
+
+- Symbolic link
+$ cd /etc/udev/rules.d
+$ sudo vi ${FILENAME}.rules
+
+[vi editor] append following line
+SUBSYSTEM=="tty", ATTRS{idVendor}=="${VENDOR_ID}", ATTRS{idProduct}=="${PRODUCT_ID}", ATTRS{serial}=="${SERIAL_NUMBER}", MODE="0666", SYMLINK+="${SYMBOLIC_LINK_NAME}"

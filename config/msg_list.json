@@ -133,6 +133,9 @@
         "header": "Header",
         "Longitude": "float64",
         "Latitude": "float64",
+        "Altitude": "float64",
+        "E_flag": "string",
+        "W_flag": "string",
         "X": "float64",
         "Y": "float64"
     },

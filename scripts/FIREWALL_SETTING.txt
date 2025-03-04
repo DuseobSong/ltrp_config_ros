@@ -1,0 +1,20 @@
+[WINDOWS FIREWALL SETTING]
+
+[inbound rules] -> [new rule]
+
+Allow the connection
+
+protocol type : any
+
+remote port
+
+[WSL2 network setting]
+- add port proxy
+<powershell> netsh interface portproxy add v4tov4 listenport=11311 linstenaddress=(wsl hostname -I) connectport=11311
+
+-delete port proxy
+<powershell> netsh interface portproxy delete v4tov4 listenport-11311 listenaddress=0.0.0.0
+
+
+[HOST MACHINE FIREWALL SETTING]
+Firewall should be turned off. While firewall enabled, topic list can be shown, but data can not be read.

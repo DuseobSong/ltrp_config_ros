@@ -607,19 +607,28 @@
         "GNSS_RTK": {
             "LIST": [],
             "VALUE": {
-                "CRC_APPLIED": 0,
+                "CRC_APPLIED": 1,
                 "SERIAL_THREAD_HZ": 100,
-                "CONVERT_THREAD_HZ": 20,
-                "NTRIP_THREAD_HZ": 10,
-                "GNSS_THREAD_TIMEOUT": 3.0,
+                "MANAGE_THREAD_HZ": 20,
+                "NTRIP_THREAD_HZ": 20,
+                "SERIAL_THREAD_TIMEOUT": 3.0,
                 "NTRIP_THREAD_TIMEOUT": 10.0,
                 "INIT_TIMEOUT": 10.0,
                 "NORMAL_MSG_STRUCT": "<5BL3B15f",
                 "DEBUG_MSG_STRUCT": "<5BHI16sHBBI3Bb3Bf2H3B2qiB9f",
                 "DEBUG_MSG_DATA_LENGTH": 110,
-                "NORMAL_MSG_DATA_LENGTH": 150,
-                "RTCM_HEADER": "0xD3000000",
-                "RTCM_REQUEST_INTERVAL": 1.0
+                "NORMAL_MSG_DATA_LENGTH": 82,
+                "RTCM_HEADER": [211, 0, 0, 0],
+                "RTCM_REQUEST_INTERVAL": 1.0,
+                "SERIAL_BAUDRATE": 115200,
+                "NTRIP_HOST": false,
+                "NTRIP_USER": "ttngtest01.ngii",
+                "NTRIP_PORT": 2101,
+                "NTRIP_PSWD": "ngii",
+                "NTRIP_CASTER": "RTS2.ngii.go.kr",
+                "NTRIP_BUFFER": 4096,
+                "NTRIP_MOUNTPOINT": "VRS-RTCM31",
+                "NTRIP_V2": true
             }
         },
         "SYSTEM_INFO_REPORT": {
@@ -647,7 +656,8 @@
             "TFMINI_PLUS_RIGHT": "/dev/tfmini_right",
             "RPLIDAR_UPPER": "/dev/rplidar_s3",
             "RPLIDAR_LOWER": "/dev/rplidar_c1",
-            "ULTRASONIC": "/dev/ultrasonic"
+            "ULTRASONIC": "/dev/ultrasonic",
+            "GNSS": "/dev/rtk_gt"
         }
     },
     "MAINBOARD_SERIAL_BYTES": {
