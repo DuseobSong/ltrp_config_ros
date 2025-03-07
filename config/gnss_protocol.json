@@ -79,7 +79,7 @@
             },
             "DEBUG": {
                 "PACKING": "<5BHI16sH2BI3Bb3Bf2H3B2qiB9fB",
-                "DATA_LENGTH": 110,
+                "DATA_LENGTH": 111,
                 "UNOQUE_CELL_PACKET_NUM": {
                     "DTYPE":"uint",
                     "SIZE": 4,
@@ -259,122 +259,128 @@
                 }
             },
             "NORMAL": {
-                "PACKING": "<5BHI3B2qi12fB",
-                "DATA_LENGTH": 83,
+                "PACKING": "<5BH2I3B2qi12fB",
+                "DATA_LENGTH": 87,
                 "UNOQUE_CELL_PACKET_NUM": {
                     "DTYPE":"uint",
                     "SIZE": 4,
                     "OFFSET": 7
                 },
+                "UTC": {
+                    "DTYPE": "long",
+                    "SIZE": 4,
+                    "OFFSET": 11
+
+                },
                 "POS_MOD_NUM_SAT": {
                     "DTYPE": "uint",
                     "SIZE": 1,
-                    "OFFSET": 11
+                    "OFFSET": 15
                 },
                 "AVG_CN0": {
                     "DTYPE": "uint",
                     "SIZE": 1,
-                    "OFFSET": 12
+                    "OFFSET": 16
                 },
                 "CELL_STATE": {
                     "DTYPE": "uint",
                     "SIZE": 1,
-                    "OFFSET": 13
+                    "OFFSET": 17
                 },
                 "LATITUDE": {
                     "DTYPE": "int",
                     "SIZE": 8,
-                    "OFFSET": 14,
+                    "OFFSET": 18,
                     "SCALING": 1e-10,
                     "UNIT": "degree"
                 },
                 "LONGITUDE": {
                     "DTYPE": "int",
                     "SIZE": 8,
-                    "OFFSET": 22,
+                    "OFFSET": 26,
                     "SCALING": 1e-10,
                     "UNIT": "degree"
                 },
                 "ELLIPSOID_HEIGHT": {
                     "DTYPE": "int",
                     "SIZE": 4,
-                    "OFFSET": 30,
+                    "OFFSET": 34,
                     "SCALING": 1e-3,
                     "UNIT": "m"
                 },
                 "ROLL_ANGLE": {
                     "DTYpE": "float",
                     "SIZE": 4,
-                    "OFFSET": 34,
+                    "OFFSET": 38,
                     "UNIT": "degree"
                 },
                 "PITCH_ANGLE": {
                     "DTYPE": "float",
                     "SIZE": 4,
-                    "OFFSET": 38,
+                    "OFFSET": 42,
                     "UNIT": "degree"
                 },
                 "YAW_ANGLE": {
                     "DTYPE": "float",
                     "SIZE": 4,
-                    "OFFSET": 42, 
+                    "OFFSET": 46, 
                     "UNIT": "degree"
                 },
                 "ACC_X": {
                     "DTYPE": "float",
                     "SIZE": 4,
-                    "OFFSET": 46,
+                    "OFFSET": 50,
                     "UNIT": "m/s^2"
                 },
                 "ACC_Y": {
                     "DTYPE": "float",
                     "SIZE": 4,
-                    "OFFSET": 50,
+                    "OFFSET": 54,
                     "UNIT": "m/s^2"
                 },
                 "ACC_Z": {
                     "DTYPE": "float",
                     "SIZE": 4,
-                    "OFFSET": 54,
+                    "OFFSET": 58,
                     "UNIT": "m/s^2" 
                 },
                 "GYRO_X": {
                     "DTYPE": "float",
                     "SIZE": 4,
-                    "OFFSET": 58,
+                    "OFFSET": 62,
                     "UNIT": "rad/s"
                 },
                 "GYRO_Y": {
                     "DTYPE": "float",
                     "SIZE": 4,
-                    "OFFSET": 62,
+                    "OFFSET": 66,
                     "UNIT": "rad/s"
                 },
                 "GYRO_Z": {
                     "DTYPE": "float",
                     "SIZE": 4,
-                    "OFFSET": 66,
+                    "OFFSET": 70,
                     "UNIT": "rad/s"
                 },
                 "MAG_X": {
                     "DTYPE": "float",
                     "SIZE": 4,
-                    "OFFSET": 70
+                    "OFFSET": 74
                 },
                 "MAG_Y": {
                     "DTYPE": "float",
                     "SIZE": 4,
-                    "OFFSET": 74
+                    "OFFSET": 78
                 },
                 "MAG_Z": {
                     "DTYPE": "float",
                     "SIZE": 4,
-                    "OFFSET": 78
+                    "OFFSET": 82
                 },
                 "CRC": {
                     "DTYPE": "uchar",
                     "SIZE": 1,
-                    "OFFSET": 82
+                    "OFFSET": 86
                 }
             },
             "COMMAND_REQ": {
@@ -406,6 +412,87 @@
                     "OFFSET": 2
                 }
             }
+        }
+    },
+    "FIELD_INDEX": {
+        "DEBUG": {
+            "HEADER_1": 0,
+            "HEADER_2": 1,
+            "HEADER_3": 2,
+            "HEADER_4": 3,
+            "TYPE": 4,
+            "LEN": 5,
+            "SEQ_NO": 6,
+            "SERIAL": 7,
+            "YEAR": 8,
+            "MONTH": 9,
+            "DAY": 10,
+            "UTC": 11,
+            "IMU_DIV": 12,
+            "POS_MODE": 13,
+            "CN0": 14,
+            "RSSI": 15,
+            "BAT_STATE": 16,
+            "CELL_STATE": 17,
+            "GPS_VALID": 18,
+            "ACD_LOAD": 19,
+            "SOG": 20,
+            "COURSE_ANGLE": 21,
+            "RESERVED1": 22,
+            "RESERVED2": 23,
+            "RESERVED3": 24,
+            "LATITUDE": 25,
+            "LONGITUDE": 26,
+            "ALTITUDE": 27,
+            "HR": 28,
+            "ROLL": 29,
+            "PITCH": 30,
+            "YAW": 31,
+            "A_N": 32,
+            "A_E": 33,
+            "A_D": 34,
+            "V_N": 35,
+            "V_E": 36,
+            "V_D": 37,
+            "CRC": 38
+        },
+        "NORMAL": {
+            "HEADER_1": 0,
+            "HEADER_2": 1,
+            "HEADER_3": 2,
+            "HEADER_4": 3,
+            "TYPE": 4,
+            "LEN": 5,
+            "SEQ_NO": 6,
+            "POS_MODE": 7,
+            "CN0": 8,
+            "CELL_STATE": 9,
+            "LATITUDE": 10,
+            "LONGITUDE": 11,
+            "ALTITUDE": 12,
+            "ROLL": 13,
+            "PITCH": 14,
+            "YAW": 15,
+            "A_X": 16,
+            "A_Y": 17,
+            "A_Z": 18,
+            "G_X": 19,
+            "G_Y": 20,
+            "G_Z": 21,
+            "M_X": 22,
+            "M_Y": 23,
+            "M_Z": 24,
+            "CRC": 25
+        },
+        "COMMAND": {
+            "HEADER_1": 0,
+            "HEADER_2": 1,
+            "HEADER_3": 2,
+            "HEADER_4": 3,
+            "TYPE": 4,
+            "LEN": 5,
+            "CMD": 6,
+            "RES": 7
         }
     }
 }
