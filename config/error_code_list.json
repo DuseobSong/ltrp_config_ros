@@ -31,7 +31,7 @@
     "28": "Node loading failed.",
     "29": "System reset failed.",
     "30": "Vital check failed.",
-    "31": "Capture thread is not initiated.",
+    "31": "Capture thread vital check failed.",
     "32": "Guide line detection thread vital check failed.",
     "33": "Marker detection thread vital check failed.",
     "34": "Capture and guide line detection thread vital check failed.",
