@@ -412,7 +412,7 @@
                 "LINEAR_VELOCITY_CALC_COEFF": 1.2,
                 "N_ACTION_MARKER": 1,
                 "OMEGA_STEP": 5.0,
-                "LINE_TRACKING_PAUSE_TIME": 1.0,
+                "LINE_TRACKING_PAUSE_TIME": 5.0,
                 "ROTATION_END_CHK_THRESHOLD": 200,
                 "RANGE_SENSOR_THRESHOLD": 4.0,
                 "ROTATION_ANGLE_ON_MARKER": [30.0],
