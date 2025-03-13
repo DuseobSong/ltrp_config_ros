@@ -1,0 +1,11 @@
+bool RemoteControl
+bool ManualMode
+bool AutonomousDriving
+bool LineFollowing
+bool Rotation
+float64 CmdVelLin
+float64 CmdVelAng
+bool Pause
+uint8 DriveState
+uint8 RotationState
+bool GuideLineMissing
