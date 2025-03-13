@@ -228,10 +228,10 @@
                 "SIZE": 40,
                 "SHAPE": "LINE",
                 "COLOR": "Y",
-                "HSV_MIN": [  9, 123, 178],
-                "HSV_MAX": [ 36, 184, 255],
-                "YCRCB_MIN": [158, 129,   0],
-                "YCRCB_MAX": [241, 250,  84]
+                "HSV_MIN": [ 25,  30, 197],
+                "HSV_MAX": [ 34, 255, 255],
+                "YCRCB_MIN": [166, 123,   0],
+                "YCRCB_MAX": [255, 182,  120]
             },
             "END_POINT": {
                 "CODE": 2,
@@ -240,20 +240,20 @@
                 "COLOR": "R",
                 "BGR_MIN": [0, 0, 0],
                 "BGR_MAX": [255, 255, 255],
-                "HSV_MIN": [168, 85, 173],
-                "HSV_MAX": [190, 255, 255],
-                "YCRCB_MIN": [106, 172, 100],
-                "YCRCB_MAX": [174, 199, 114]
+                "HSV_MIN": [  0,  94, 105],
+                "HSV_MAX": [ 25, 219, 255],
+                "YCRCB_MIN": [70, 141, 89],
+                "YCRCB_MAX": [172, 199, 125]
             },
             "ACTION": {
                 "CODE": 3,
                 "SIZE": 40,
                 "SHAPE": "RECTANGLE",
                 "COLOR": "B",
-                "HSV_MIN": [ 94,  85, 159],
-                "HSV_MAX": [122, 255, 255],
-                "YCRCB_MIN": [ 88,  94, 145],
-                "YCRCB_MAX": [152, 120, 255]
+                "HSV_MIN": [ 98, 121,   0],
+                "HSV_MAX": [144, 255, 255],
+                "YCRCB_MIN": [ 31,  61, 136],
+                "YCRCB_MAX": [147, 120, 255]
             }
         }
     },
@@ -413,7 +413,7 @@
                 "N_ACTION_MARKER": 1,
                 "OMEGA_STEP": 5.0,
                 "LINE_TRACKING_PAUSE_TIME": 5.0,
-                "ROTATION_END_CHK_THRESHOLD": 200,
+                "ROTATION_END_CHK_THRESHOLD": 50,
                 "RANGE_SENSOR_THRESHOLD": 4.0,
                 "ROTATION_ANGLE_ON_MARKER": [30.0],
                 "ROTATION_ANGULAR_VELOCITY": 10.0,
@@ -425,9 +425,9 @@
                 "TARGET_RANGE_SENSOR": 1,
                 "THREAD_HZ": 100,
                 "V_LIN_LOWER_LIM": 0.0,
-                "V_LIN_UPPER_LIM": 0.7,
+                "V_LIN_UPPER_LIM": 0.3,
                 "V_ANG_LIM": 40,
-                "V_STEP": 0.1
+                "V_STEP": 0.03
             }
         },
         "LINE_DETECT": {
@@ -440,14 +440,14 @@
                 "CAP_THREAD_TIMEOUT": 0.5,
                 "CAPTURE_THREAD_HZ": 500,
                 "CONTOUR_AREA_THRESHOLD": 150,
-                "FRAME_SKIP": 5,
+                "FRAME_SKIP": 20,
                 "GUIDE_LINE_DET_THREAD_TIMEOUT": 0.5,
                 "IMAGE_NOT_AVAILABLE_THRESH": 500,
                 "INIT_TIMEOUT": 120.0,
                 "LATERAL_OFFSET": 0.0,
                 "LINE_DETECTION_THREAD_HZ": 20,
                 "LOWER_ROI_ROW": 500,
-                "LOWER_ROI_WIDTH": 320,
+                "LOWER_ROI_WIDTH": 600,
                 "MANAGEMENT_THREAD_HZ": 20,
                 "MARKER_DETECTION_THREAD_HZ": 20,
                 "MARKER_DET_THREAD_TIMEOUT": 0.5,
@@ -460,7 +460,7 @@
                 "SRC_HEIGHT": 720,
                 "SRC_WIDTH": 1280,
                 "UPPER_ROI_ROW": 100,
-                "UPPER_ROI_WIDTH": 200,
+                "UPPER_ROI_WIDTH": 400,
                 "USER": "irova"
             }
         },
@@ -644,6 +644,39 @@
                 "DB_UPDATE_INTERVAL": 1.0,
                 "DB_USER": "ltrp_local",
                 "THREAD_HZ": 10
+            }
+        },
+        "SIMPLE_LINE_DETECT": {
+            "DESCRIPTION": "",
+            "LIST": [],
+            "VALUE": {
+                "ADDR": "192.168.2.110",
+                "ARUCO_DICT_TYPE": "DICT_4X4_50",
+                "BINARY_THRESH": [150, 255],
+                "CAP_THREAD_TIMEOUT": 0.5,
+                "CAPTURE_THREAD_HZ": 500,
+                "CONTOUR_AREA_THRESHOLD": 150,
+                "FRAME_SKIP": 3,
+                "GUIDE_LINE_DET_THREAD_TIMEOUT": 0.5,
+                "IMAGE_NOT_AVAILABLE_THRESH": 500,
+                "INIT_TIMEOUT": 120.0,
+                "LATERAL_OFFSET": 0.0,
+                "LINE_DETECTION_THREAD_HZ": 20,
+                "MANAGEMENT_THREAD_HZ": 20,
+                "MARKER_DETECTION_THREAD_HZ": 20,
+                "MARKER_DET_THREAD_TIMEOUT": 0.5,
+                "MODEL": "DH-IPC-HDBW1431E",
+                "PORT": 554,
+                "PSWD": "1q2w3e4r",
+                "RESIZE_HEIGHT": 540,
+                "RESIZE_WIDTH": 920,
+                "ROI_HEIGHT": 200,
+                "ROI_WIDTH": 600,
+                "ROI_OFFSET": 310,
+                "ROI_PRIORITY": [0, 1],
+                "SRC_HEIGHT": 720,
+                "SRC_WIDTH": 1280,
+                "USER": "irova"
             }
         }
     },
