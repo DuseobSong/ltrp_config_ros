@@ -1,7 +1,7 @@
-ComputingTime computing_time
-Marker Marker
+ComputingTime ComputingTime
 MarkerDetection MarkerDetection
 Detection LineDetection
 Target Target
 bool EndPoint
 bool ActionMarker
+bool Line

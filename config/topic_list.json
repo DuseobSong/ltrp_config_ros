@@ -72,6 +72,10 @@
         "NAME": "/drive_command",
         "TYPE": "std_msgs.msg.UInt8"
     },
+    "drive_monitor_topic": {
+        "NAME": "/system/drive_status",
+        "TYEP": "ltrp_config_ros.msg.LTRPDrivingStatus"
+    },
     "drive_resume_topic": {
         "NAME": "/drive_resume",
         "TYPE": "std_msgs.msg.Empty"
@@ -136,6 +140,10 @@
         "NAME": "/lpr/capture_result",
         "TYPE": "ltrp_config_ros.msg.LprCaptureResult"
     },
+    "ltrp_driving_status_topic": {
+        "NAME": "/system/driving_status",
+        "TYPE": "ltpr_config_ros.msg.LTRPDrivingStatus"
+    },
     "marker_detection_topic": {
         "NAME": "/marker_detection",
         "TYPE": "std_msgs.msg.UInt8"
@@ -143,6 +151,10 @@
     "marker_mask_topic": {
         "NAME": "/marker_mask",
         "TYPE": "sensor_msgs.msg.Image"
+    },
+    "monitor_msg_pub": {
+        "NAME": "/system/monitor",
+        "TYPE": "ltrp_config_ros.msg.LTRPStatus"
     },
     "motor_driver_feedback_topic": {
         "NAME": "/mtr_drv_feedback",

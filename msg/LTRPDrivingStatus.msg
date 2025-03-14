@@ -9,3 +9,4 @@ bool Pause
 uint8 DriveState
 uint8 RotationState
 bool GuideLineMissing
+uint8 ErrorCode

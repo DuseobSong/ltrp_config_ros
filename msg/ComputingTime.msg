@@ -1,3 +1,3 @@
 float64 LoopTime
 ImageProcessingComputingTime ImageProcessing
-LineDetectionComputingTime LineDetection
+MarkerDetectionComputingTime MarkerDetection

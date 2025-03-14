@@ -1,0 +1,11 @@
+bool BH1750 
+bool CWSMain
+bool CWSSub
+bool CWSAreaVisual
+bool DriveControl
+bool ExternalButton
+bool GNSS
+bool LineDetect
+bool LPR
+bool RangeSensor
+bool Serial

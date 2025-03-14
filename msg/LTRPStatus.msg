@@ -1,3 +1,4 @@
+NodeState NodeState
 LTRPObstacle CWS
 LTRPDetection MarkerDetection
 LTRPDrivingStatus Driving

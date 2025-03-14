@@ -23,7 +23,8 @@ add_message_files(
   Feedback.msg
   Illumination.msg
   ImageProcessingComputingTime.msg
-  LineDetectionComputingTime.msg
+  MarkerDetectionComputingTime.msg
+  NodeState.msg
   LprCaptureRequest.msg
   LprCaptureResult.msg
   Marker.msg
