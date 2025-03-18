@@ -415,12 +415,12 @@
                 "DRIVE_SCENARIO": 4,
                 "LINEAR_VELOCITY_CALC_COEFF": 1.2,
                 "N_ACTION_MARKER": 1,
-                "OMEGA_STEP": 5.0,
-                "LINE_TRACKING_PAUSE_TIME": 5.0,
-                "ROTATION_END_CHK_THRESHOLD": 50,
+                "OMEGA_STEP": 10.0,
+                "LINE_TRACKING_PAUSE_TIME": 3.0,
+                "ROTATION_END_CHK_THRESHOLD": 300,
                 "RANGE_SENSOR_THRESHOLD": 4.0,
                 "ROTATION_ANGLE_ON_MARKER": [30.0],
-                "ROTATION_ANGULAR_VELOCITY": 10.0,
+                "ROTATION_ANGULAR_VELOCITY": 30.0,
                 "ROTATION_DIR": 1,
                 "ROTATION_MARGIN": 10.0,
                 "START_DELAY": 3.0,
@@ -428,10 +428,11 @@
                 "STEPWISE_DISTANCE_THRESHOLD": 3.0,
                 "TARGET_RANGE_SENSOR": 1,
                 "THREAD_HZ": 100,
-                "V_LIN_LOWER_LIM": 0.0,
+                "V_LIN_LOWER_LIM": -0.3,
                 "V_LIN_UPPER_LIM": 0.3,
                 "V_ANG_LIM": 40,
-                "V_STEP": 0.03
+                "V_STEP": 0.1,
+                "TASK_DELAY_ON_MARKER": 2.0
             }
         },
         "LINE_DETECT": {
@@ -656,11 +657,11 @@
             "VALUE": {
                 "ADDR": "192.168.2.110",
                 "ARUCO_DICT_TYPE": "DICT_4X4_50",
-                "BINARY_THRESH": [150, 255],
+                "BINARY_THRESH": [170, 255],
                 "CAP_THREAD_TIMEOUT": 0.5,
                 "CAPTURE_THREAD_HZ": 500,
                 "CONTOUR_AREA_THRESHOLD": 150,
-                "FRAME_SKIP": 3,
+                "FRAME_SKIP": 15,
                 "GUIDE_LINE_DET_THREAD_TIMEOUT": 0.5,
                 "IMAGE_NOT_AVAILABLE_THRESH": 500,
                 "INIT_TIMEOUT": 120.0,
@@ -779,7 +780,7 @@
     "ARUCO_MARKER_DESCRIPTION": {
         "DESCRIPTION": "",
         "ACTION_MARKER_LIST": [11, 12, 13, 14, 15, 21, 22, 23, 24, 25],
-        "END_POINT_MARKER_LIST": [3, 4],
+        "END_POINT_MARKER_LIST": [18, 19],
         "VALUE": {
             "NONE": 0,
             "GUIDELINE": 1,
@@ -793,8 +794,8 @@
             "PAUSE_CW_45": 23,
             "PAUSE_CW_60": 24,
             "PAUSE_CW_80": 25,
-            "END_POINT_CW": 3,
-            "END_POINT_CCW": 4
+            "END_POINT_CW": 18,
+            "END_POINT_CCW": 19
         }
     },
     "CWS_WARNING_STATE": {

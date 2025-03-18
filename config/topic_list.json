@@ -140,10 +140,6 @@
         "NAME": "/lpr/capture_result",
         "TYPE": "ltrp_config_ros.msg.LprCaptureResult"
     },
-    "ltrp_driving_status_topic": {
-        "NAME": "/system/driving_status",
-        "TYPE": "ltpr_config_ros.msg.LTRPDrivingStatus"
-    },
     "marker_detection_topic": {
         "NAME": "/marker_detection",
         "TYPE": "std_msgs.msg.UInt8"
