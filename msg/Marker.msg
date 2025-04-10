@@ -1,4 +1,4 @@
-int8 MarkerType
+uint8 MarkerType
 bool detected
 float64 cX
 float64 cY

@@ -6,3 +6,4 @@ string E_flag
 string N_flag
 float64 X
 float64 Y
+uint16 EPSG

@@ -1,11 +1,11 @@
 {
     "prefix": "/ltrp",
     "activate_range_sensor_topic": {
-        "NAME": "/activate_range_sensor",
+        "NAME": "/range/activates",
         "TYPE": "std_msgs.msg.Bool"
     },
     "aruco_detector_enable_topic": {
-        "NAME": "/aruco_detector_enable",
+        "NAME": "/detection/aruco_detector_enable",
         "TYPE": "std_msgs.msg.Bool"
     },
     "bh1750_illumination_topic": {
@@ -17,12 +17,12 @@
         "TYPE": "std_msgs.msg.Bool"
     },
     "button_trigger_topic": {
-        "NAME": "/button_trigger",
+        "NAME": "/debug/button_trigger",
         "TYPE": "std_msgs.msg.Bool"
     },
     "broadcast_topic": {
-        "NAME": "/broadcast",
-        "TYPE": "ltrp_config_ros/msg/Broadcast"
+        "NAME": "/lpr/broadcast",
+        "TYPE": "ltrp_config_ros.msg.Broadcast"
     },
     "camera_direction_topic": {
         "NAME": "/lpr/camera_direction",
@@ -46,11 +46,11 @@
     },
     "computing_time_topic": {
         "NAME": "/computing_time",
-        "TYPE": "ltrp_config_ros/ComputingTime"
+        "TYPE": "ltrp_config_ros.msg.ComputingTime"
     },
     "cws_area_visualization_topic": {
         "NAME": "/cws/area",
-        "TYPE": "visualization_msgs.msg.Marker"
+        "TYPE": "visualization_msgs.msg.MarkerArray"
     },
     "detection_result_topic": {
         "NAME": "/detection",
@@ -76,10 +76,6 @@
         "NAME": "/system/drive_status",
         "TYEP": "ltrp_config_ros.msg.LTRPDrivingStatus"
     },
-    "drive_resume_topic": {
-        "NAME": "/drive_resume",
-        "TYPE": "std_msgs.msg.Empty"
-    },    
     "drive_status_topic": {
         "NAME": "/drive_status",
         "TYPE": "std_msgs.msg.UInt8"
@@ -148,6 +144,10 @@
         "NAME": "/marker_mask",
         "TYPE": "sensor_msgs.msg.Image"
     },
+    "marker_reset_topic": {
+        "NAME": "/marker_reset",
+        "TYPE": "std_msgs.msg.Empty"
+    },    
     "monitor_msg_pub": {
         "NAME": "/system/monitor",
         "TYPE": "ltrp_config_ros.msg.LTRPStatus"

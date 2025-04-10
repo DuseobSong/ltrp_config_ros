@@ -3,7 +3,7 @@
 
     },
     "NODE_CODE": {
-        "DESCRIPTION": "",
+        "DESCRIPTION": "All node codes, root packages, excutable files, execution arguments",
         "LIST": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 81, 98, 99, 255],
         "NAME": ["OVERSEER", "MAINBOARD_SERIAL", "DRIVE_CONTROL", "LINE_DETECT", "CWS", "CWS_LOWER", "RANGE_SENSOR", "BH1750", "ULTRASONIC", "EXTERNAL_BUTTON", "RPLIDAR_C1", "LPR", "BROADCAST", "GNSS_RTK", "ERRPR_REPORT", "CWS_AREA", "REMOTE", "DEBUG"],
         "ACTIVATION": [1, 2, 3, 4, 5, 6, 9, 10, 11, 12, 13],
@@ -139,14 +139,14 @@
     },
     "DIRECTION": {
         "DESCRIPTION": "",
-        "LIST": [1, 2, 3, 4, 5, 6, 7, 9, 12],
+        "LIST": [1, 2, 3, 4, 5, 6, 9, 12],
         "VALUE": {
             "LEFT": 1,
             "RIGHT": 2,
             "UP": 3,
-            "DOWN": 5,
-            "FORWARD": 6,
-            "BACKWARD": 7,
+            "DOWN": 4,
+            "FORWARD": 5,
+            "BACKWARD": 6,
             "CENTER": 9,
             "LEFT_AND_RIGHT": 12
         }
@@ -415,7 +415,7 @@
                 "DRIVE_SCENARIO": 4,
                 "LINEAR_VELOCITY_CALC_COEFF": 1.2,
                 "N_ACTION_MARKER": 1,
-                "OMEGA_STEP": 10.0,
+                "OMEGA_STEP": 5.0,
                 "LINE_TRACKING_PAUSE_TIME": 3.0,
                 "ROTATION_END_CHK_THRESHOLD": 300,
                 "RANGE_SENSOR_THRESHOLD": 4.0,
@@ -432,7 +432,7 @@
                 "V_LIN_UPPER_LIM": 0.3,
                 "V_ANG_LIM": 40,
                 "V_STEP": 0.1,
-                "TASK_DELAY_ON_MARKER": 2.0
+                "TASK_DELAY_ON_MARKER": 1.0
             }
         },
         "LINE_DETECT": {
@@ -657,11 +657,12 @@
             "VALUE": {
                 "ADDR": "192.168.2.110",
                 "ARUCO_DICT_TYPE": "DICT_4X4_50",
-                "BINARY_THRESH": [170, 255],
-                "CAP_THREAD_TIMEOUT": 0.5,
-                "CAPTURE_THREAD_HZ": 500,
+                "BINARY_THRESH": [155, 255],
+                "CAP_THREAD_TIMEOUT": 60.0,
+                "CAPTURE_THREAD_HZ": 20,
                 "CONTOUR_AREA_THRESHOLD": 150,
-                "FRAME_SKIP": 15,
+                "FRAME_SKIP": 1,
+                "FRAME_SKIP_TIME": 0.01,
                 "GUIDE_LINE_DET_THREAD_TIMEOUT": 0.5,
                 "IMAGE_NOT_AVAILABLE_THRESH": 500,
                 "INIT_TIMEOUT": 120.0,
@@ -809,15 +810,17 @@
     },
     "TASK_FLAG": {
         "DESCRIPTION": "",
-        "LIST": [0, 1, 2, 3, 4, 5, 6],
+        "LIST": [0, 1, 2, 3, 4, 5, 6, 7, 8],
         "VALUE": {
             "WAIT_FOR_SIGNAL": 0,
             "REQUEST_ROTATION": 1,
             "REQUEST_TASK_START": 2,
             "WAIT_FOR_TASK_RESULT": 3,
-            "TASK_END": 4,
+            "DETECTION_END": 4,
             "REQUEST_RETURN": 5,
-            "READY_FOR_DRIVING": 6
+            "READY_FOR_DRIVING": 6,
+            "BROADCAST_ENF": 7,
+            "TASK_END": 8
 
         }
     },
